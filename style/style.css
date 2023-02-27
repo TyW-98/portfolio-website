@@ -44,7 +44,7 @@ body {
     background: transparent;
     background: rgba(0, 0, 0, 0.55);
     text-align: center;
-    transition: left 1s ease-in;
+    transition: left 3s linear;
 }
 
 /* Position options in overlay navigation buttons */
@@ -78,9 +78,12 @@ body {
 
 /* Social icon div */
 .socials {
+    display: flex;
     position: relative;
     top: 17.5%;
     margin: 10px 0;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Social Icons */
@@ -88,6 +91,22 @@ body {
     margin: 0 50px 0;
     font-size: 25pt;
     color: rgb(104, 47, 47);
+    transition: all 0.2s ease-in-out;
+}
+
+.socials a:hover {
+    animation: bouncing 0.75s infinite;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bouncing {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Heading section */
