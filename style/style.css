@@ -1,6 +1,7 @@
 :root {
     --bg-color: bisque;
     --steps: 0;
+    --type-animation-duration: 6s;
 }
 
 body {
@@ -116,14 +117,32 @@ body {
 .welcome-message::before {
     background: var(--bg-color);
     animation-name: typing;
-    animation-duration: 4s;
+    animation-duration: var(--type-animation-duration);
     animation-timing-function: steps(var(--steps));
     animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.welcome-message::after{
+    background-color: black;
+    width: 0.250rem;
+    animation: 
+        typing var(--type-animation-duration) steps(var(--steps)) 1s 1 normal both,
+        blinking 500ms steps(var(--steps)) infinite normal;
 }
 
 @keyframes typing {
     to { 
         left: 100%;
+    }
+}
+
+@keyframes blinking {
+    from {
+        background-color: black;
+    }
+    to {
+        background: transparent;
     }
 }
 
