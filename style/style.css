@@ -4,20 +4,28 @@ body {
 }
 
 /* Open navigation buttons */
+
 .menubtn {
     position: fixed;
     top: 20px;
     left: 20px;
-    width: 50px;
-    height: 50px;
     font-size: 50pt;
     color: rgb(171, 189, 121);
     cursor: pointer;
 }
 
+.closebtn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-size: 80pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /* Overlay section */
 .overlay {
-    background-color: bisque;
     height: 0;
     width: 100%;
     z-index: 9999;
@@ -25,14 +33,54 @@ body {
     left: 0;   
     top: 0;
     overflow-y: hidden;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.55);
     transform: 1s;
+    text-align: center;
+}
+
+/* Position options in overlay navigation buttons */
+.nav-content {
+    position: relative;
+    top: 15%;
+    margin: 20px;
+    width: 100%;
+}
+
+/* Overlay navigation options */
+.menu li {
+    list-style: none;
+    margin: 2.5%;
+    padding: 0.5%;
+}
+
+/* Overlay navigation options text */
+.menu li a {
+    font-size: 30pt;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Social icon div */
+.socials {
+    position: relative;
+    top: 17.5%;
+    margin: 10px 0;
+}
+
+/* Social Icons */
+.socials a {
+    margin: 0 50px 0;
+    font-size: 25pt;
+    color: rgb(104, 47, 47);
 }
 
 /* Content section */
 .content {
-    background-color: aquamarine;
+    background-color: rgb(129, 177, 161);
     width: 100%;
-    height: 800px;
+    height: 1000px;
     background-size: cover;
     display: flex;
     align-items: center;

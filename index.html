@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Website</title>
 
     <!--CSS Stylesheet-->
-    <link rel="stylesheet" href="style/style.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
 
+    <!-- Font Awesome script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+      integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  
+  <body>
     <!--Overlay nagivation-->
     <div id="overlayNav" class="overlay">
-        <!--Overlay close button-->
-        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--Overlay close button-->
+      <a href="#" class="closebtn" onclick="closeNav()">&times</a>
 
-        <!--Options-->
-        <div class="options">
-            <ul class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Home</a></li>
-            </ul>
-        </div>
+      <!--Options-->
+      <div class="nav-content">
+        <ul class="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About me</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="pdf/CV.pdf" download>Download a copy of CV</a></li>
+          <li><a href="">Contact me</a></li>
+        </ul>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/TyW-98" class="link"><i class="fa-brands fa-github footer-icon"></i></a> 
+        <a href="https://www.linkedin.com/in/yitwey-tam/" class="link"><i class="fa-brands fa-linkedin footer-icon"></i></a> 
+        <a href="mailto:email.com" class="link"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+
+      
     </div>
 
     <!--Overlay open button-->
     <div class="menubtn" onclick="openNav()">&#9776;</div>
-    
-    <div class="content">
 
-
-    </div>
+    <div class="content"></div>
 
     <script src="script/script.js"></script>
-
-
-</body>
+  </body>
 </html>
