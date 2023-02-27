@@ -1,7 +1,12 @@
+:root {
+    --bg-color: bisque;
+    --steps: 0;
+}
+
 body {
     margin:0;
     padding: 0;
-    background-color: bisque;
+    background-color: var(--bg-color);
     display: grid;
 }
 
@@ -96,7 +101,7 @@ body {
     font-family: monospace;
     position: relative;
     width: max-content;
-
+    top: 150px;
 }
 
 .welcome-message::before, .welcome-message::after {
@@ -109,12 +114,11 @@ body {
 }
 
 .welcome-message::before {
-    background:rgb(104, 47, 47);
+    background: var(--bg-color);
     animation-name: typing;
     animation-duration: 4s;
-    animation-timing-function: steps(21);
+    animation-timing-function: steps(var(--steps));
     animation-fill-mode: forwards;
-
 }
 
 @keyframes typing {

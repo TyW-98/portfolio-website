@@ -12,4 +12,4 @@ function closeNav() {
 var welcomeMsg = document.querySelector(".welcome-message")
 var welcomeMsgLength = welcomeMsg.textContent.length
 
-document.documentElement.style.setProperty('--step','welcomeMsgLength');
+document.documentElement.style.setProperty('--steps',welcomeMsgLength)
