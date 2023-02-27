@@ -16,7 +16,7 @@ body {
 .menubtn {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     font-size: 50pt;
     color: rgb(171, 189, 121);
     cursor: pointer;
@@ -25,7 +25,7 @@ body {
 .closebtn {
     position: absolute;
     top: 10px;
-    left: 20px;
+    right: 20px;
     color: white;
     font-size: 80pt;
     font-weight: bold;
@@ -34,17 +34,17 @@ body {
 
 /* Overlay section */
 .overlay {
-    height: 0;
+    height: 100%;
     width: 100%;
     z-index: 9999;
     position: fixed;
-    left: 0;   
+    left: -1000%;   
     top: 0;
     overflow-y: hidden;
     background: transparent;
     background: rgba(0, 0, 0, 0.55);
-    transform: 1s;
     text-align: center;
+    transition: left 1s ease-in;
 }
 
 /* Position options in overlay navigation buttons */
@@ -73,6 +73,7 @@ body {
 .menu li a:hover , menu li a:focus {
     background-color: brown;
     color: bisque;
+    border-radius: 25%;
 }
 
 /* Social icon div */
@@ -95,7 +96,7 @@ body {
     margin: 0 auto;
 }
 
-.welcome-message {
+.sub-title, .welcome-message {
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 60pt;
@@ -139,10 +140,17 @@ body {
 
 @keyframes blinking {
     from {
-        background-color: black;
+        background-color: rgb(167, 13, 13);
     }
     to {
         background: transparent;
     }
+}
+
+/* Welcome sub message */
+.typed-message {
+    position: relative;
+    top: 250px;
+    font-size: 36pt;
 }
 
