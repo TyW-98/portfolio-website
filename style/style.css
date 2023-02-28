@@ -113,9 +113,11 @@ body {
 .heading-section {
     text-align: center;
     margin: 0 auto;
+    position: relative;
+    top: 250px;
 }
 
-.sub-title, .big-title {
+.big-title {
     position: relative;
     top: 250px;
     font-family: 'Courier New', Courier, monospace;
@@ -124,10 +126,37 @@ body {
 }
 
 .sub-title {
+    font-family:'Courier New', Courier, monospace;
     margin-top: 50px;
     font-size: 30pt;
     font-weight: 500;
-    animation: move-subtitle 0.5s steps(1);
+    position: relative;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub-title::before, .sub-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sub-title::before {
+    background: var(--bg-color);
+    animation: typing var(--type-animation-duration) steps(var(--steps)) forwards 1s;
+}
+
+.sub-title::after {
+    background: black;
+    width: 0.125em;
+    animation: 
+        typing var(--type-animation-duration) steps(var(--steps)) 1s 1 normal both,
+        blinking 500ms steps(var(--steps)) infinite,
+        stop-blinking 500ms steps(var(--steps)) forwards calc(var(--type-animation-duration) + 3s);    
 }
 
 @keyframes move-subtitle {
@@ -138,3 +167,25 @@ body {
         transform: translateY(0);
     }
 }
+
+@keyframes typing {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blinking {
+    from {
+        background: black;
+    }
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes stop-blinking {
+    to {
+        background: transparent;
+    }
+}
+

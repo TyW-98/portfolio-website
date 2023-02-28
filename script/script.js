@@ -5,7 +5,6 @@ function openNav() {
   
     // Move the overlay navigation from the left to the center of the screen
     overlayNav.style.left = "0";
-
 }
 
 // Close overlay navigation menu
@@ -18,7 +17,9 @@ function closeNav() {
 }
 
 // The length of the title message
-var welcomeMsg = document.querySelector(".welcome-message")
+var welcomeMsg = document.querySelector(".sub-title")
 var welcomeMsgLength = welcomeMsg.textContent.length
 
 document.documentElement.style.setProperty('--steps',welcomeMsgLength)
+
+
