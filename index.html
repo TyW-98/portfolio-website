@@ -28,12 +28,12 @@
     <!--Overlay nagivation-->
     <div id="overlayNav" class="overlay">
       <!--Overlay close button-->
-      <a href="#" class="closebtn" onclick="closeNav()">&times</a>
+      <a href="#" class="closebtn" onclick="closeNav()"><i class="fa-regular fa-circle-xmark"></i></a>
 
       <!--Options-->
       <div class="nav-content">
         <ul class="menu">
-          <li><a href="#heading-section">Home</a></li>
+          <li><a href="#top">Home</a></li>
           <li><a href="">About me</a></li>
           <li><a href="">Projects</a></li>
           <li><a href="#">Download a copy of my CV</a></li>
@@ -53,14 +53,17 @@
       </div>
     </div>
 
-    <div data-scroll-container>
-      <section id="heading-section" data-scroll-section>
+    <nav class="navbar sticky-top">
+      <!--Overlay open button-->
+      <div class="openbtn" onclick="openNav()"><i class="fa-solid fa-square-caret-down"></i></div>
+    </nav>
+
+    <a id="top"></a>
+
+    <div data-scroll-container="">
+      <section id="heading-section" data-scroll-section="">
         <div class="container titles">
           <div class="row">
-            <div class="col-6 col-lg-3">
-              <!--Overlay open button-->
-              <div class="menubtn" onclick="openNav()">&#9776;</div>
-            </div>
             <div class="col-12">
               <div class="heading-section">
                 <p class="sub-title">Hi, my name is abc</p>
@@ -70,15 +73,11 @@
           </div>
         </div>
       </section>
-    </div>
 
-    <div data-scroll-container>
-      <section id="about-me" data-scroll-section>
+      <section id="about-me" data-scroll-section="">
         <div class="personal-profile"></div>
-      
       </section>
     </div>
-
     <!-- Font Awesome script -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
@@ -102,5 +101,16 @@
 
     <!--Javascript-->
     <script src="script/index.js"></script>
+
+    <!--Locomotive Scroll-->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <!--Locomotive Scroll-->
+    <script>
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+    </script>
   </body>
 </html>
