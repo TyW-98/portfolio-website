@@ -2,7 +2,7 @@
     --bg-color: bisque;
     --sub-steps: 0;
     --title-steps: 0;
-    --type-animation-duration: 6s;
+    --type-animation-duration: 2.5s;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     display: grid;
 }
 
-/* Open navigation buttons */
+/* === Open navigation buttons === */
 
 .menubtn {
     position: fixed;
@@ -33,7 +33,7 @@ body {
     text-decoration: none;
 }
 
-/* Overlay section */
+/* === Overlay section === */
 .overlay {
     height: 100%;
     width: 100%;
@@ -110,7 +110,7 @@ body {
     }
 }
 
-/* Heading section */
+/* === Heading section  ===*/
 .heading-section {
     text-align: center;
     margin: 0 auto;
@@ -118,6 +118,7 @@ body {
     top: 250px;
 }
 
+/* Title and subtitle */
 .sub-title, .big-title {
     position: relative;
     font-family: 'Courier New', Courier, monospace;
@@ -129,7 +130,7 @@ body {
     transform: translateX(-50%);
 }
 
-.big-title::before, big-title::after, .sub-title::before, .sub-title::after {
+.big-title::before, .big-title::after, .sub-title::before, .sub-title::after {
     content: "";
     position: absolute;
     top: 0;
@@ -145,28 +146,41 @@ body {
     z-index: 1;
 }
 
+/* sub-title typing animation */
 .sub-title::before {
     background: var(--bg-color);
     animation: typing var(--type-animation-duration) steps(var(--sub-steps)) forwards 1s;
     
 }
 
+/* sub-title blinking animation */
 .sub-title::after {
     background: black;
     width: 0.125em;
     animation: 
         typing var(--type-animation-duration) steps(var(--sub-steps)) 1s 1 normal both,
         blinking 500ms steps(var(--sub-steps)) infinite,
-        stop-blinking 500ms steps(var(--sub-steps)) forwards calc(var(--type-animation-duration) + 3s); 
+        stop-blinking 500ms steps(var(--sub-steps)) forwards calc(var(--type-animation-duration) + 1.45s); 
 }
 
+/* big-title typing animation */
 .big-title::before {
     background: var(--bg-color);
-    animation: typing var(--type-animation-duration) steps(var(--title-steps)) forwards calc(var(--type-animation-duration) + 3.5s);
+    animation: typing var(--type-animation-duration) steps(var(--title-steps)) forwards calc(var(--type-animation-duration) + 1.65s);
 
 }
 
+/* big-title blinking animation */
+.big-title::after {
+    background: transparent;
+    width: 0.125em;
+    animation:    
+        typing var(--type-animation-duration) steps(var(--title-steps)) forwards calc(var(--type-animation-duration) + 1.65s),
+        blinking 500ms steps(var(--title-steps)) infinite calc(var(--type-animation-duration) + 1.65s),
+        stop-blinking 1 steps(1) forwards calc((var(--type-animation-duration)*2) + 4s);
+}
 
+/* big-title and sub-title animation keyframes */
 @keyframes typing {
     to {
         left: 100%;
@@ -188,3 +202,11 @@ body {
     }
 }
 
+/* === Personal profile section === */
+
+.personal-profile {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-color: var(--bg-color);
+}
