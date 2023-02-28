@@ -17,15 +17,19 @@ function closeNav() {
 }
 
 // The length of sub title 
-var subTitle = document.querySelector(".sub-title")
-var subTitleLength = subTitle.textContent.length
+var subTitle = document.querySelector(".sub-title");
+var subTitleLength = subTitle.textContent.length;
 
-document.documentElement.style.setProperty('--sub-steps',subTitleLength)
+document.documentElement.style.setProperty('--sub-steps',subTitleLength);
 
 // The length of the title
-var title = document.querySelector(".big-title")
-var titleLength = title.textContent.length
+var title = document.querySelector(".big-title");
+var titleLength = title.textContent.length;
 
-console.log(titleLength)
+console.log(titleLength);
 
-document.documentElement.style.setProperty('--title-steps',titleLength)
+document.documentElement.style.setProperty('--title-steps',titleLength);
+
+
+
+
