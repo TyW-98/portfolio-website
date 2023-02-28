@@ -5,6 +5,7 @@ function openNav() {
   
     // Move the overlay navigation from the left to the center of the screen
     overlayNav.style.left = "0";
+
 }
 
 // Close overlay navigation menu

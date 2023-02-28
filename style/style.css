@@ -38,13 +38,13 @@ body {
     width: 100%;
     z-index: 9999;
     position: fixed;
-    left: -1000%;   
+    left: -100%;   
     top: 0;
     overflow-y: hidden;
     background: transparent;
     background: rgba(0, 0, 0, 0.55);
     text-align: center;
-    transition: left 3s linear;
+    transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /* Position options in overlay navigation buttons */
@@ -115,61 +115,26 @@ body {
     margin: 0 auto;
 }
 
-.sub-title, .welcome-message {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 60pt;
-    font-family: monospace;
-    position: relative;
-    width: max-content;
-    top: 150px;
-}
-
-.welcome-message::before, .welcome-message::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.welcome-message::before {
-    background: var(--bg-color);
-    animation-name: typing;
-    animation-duration: var(--type-animation-duration);
-    animation-timing-function: steps(var(--steps));
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-
-.welcome-message::after{
-    background-color: black;
-    width: 0.250rem;
-    animation: 
-        typing var(--type-animation-duration) steps(var(--steps)) 1s 1 normal both,
-        blinking 500ms steps(var(--steps)) infinite normal;
-}
-
-@keyframes typing {
-    to { 
-        left: 100%;
-    }
-}
-
-@keyframes blinking {
-    from {
-        background-color: rgb(167, 13, 13);
-    }
-    to {
-        background: transparent;
-    }
-}
-
-/* Welcome sub message */
-.typed-message {
+.sub-title, .big-title {
     position: relative;
     top: 250px;
-    font-size: 36pt;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60pt;
+    font-weight: 700;
 }
 
+.sub-title {
+    margin-top: 50px;
+    font-size: 30pt;
+    font-weight: 500;
+    animation: move-subtitle 0.5s steps(1);
+}
+
+@keyframes move-subtitle {
+    0% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
