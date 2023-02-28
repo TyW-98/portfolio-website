@@ -139,9 +139,9 @@ menu li span:focus {
 #heading-section {
     text-align: left;
     position: relative;
-    height: 70vh;
+    height: 65vh;
     width: 50vw;
-    padding-top: 6.25rem;
+    padding-top: 3.125rem;
     padding-left: 6.25rem;
 }
 
@@ -232,6 +232,33 @@ menu li span:focus {
     }
 }
 
+/* Download CV button */
+.download-cv-btn {
+    background-color: rgb(12, 53, 87);
+    border: solid 1px black;
+}
+
+.download-cv-btn:hover {
+    background-color: rgb(28, 96, 173) !important;
+    border: solid 1px black !important;
+}
+
+.download-cv-btn a {
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+}
+
+.mail-btn {
+    background-color: rgb(255, 255, 255)
+}
+
+.mail-btn:hover {
+    background-color: rgb(206, 178, 22) !important;
+}
+
+.mail-btn a{
+    text-decoration: none;
+}
 
 /* Second Section */
 #second-section {
