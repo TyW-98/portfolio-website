@@ -7,9 +7,13 @@
 
 
 body {
-    margin:0;
+    margin: 0;
     padding: 0;
     background-color: var(--bg-color);
+    height: 100vh;
+}
+
+section {
     height: 100vh;
 }
 
@@ -39,7 +43,7 @@ body {
     width: 100vw;
     z-index: 9999;
     position: fixed;
-    left: -100%;   
+    left: -100%;
     top: 0;
     overflow-y: hidden;
     background: transparent;
@@ -67,13 +71,14 @@ body {
 
 /* Overlay navigation options text */
 .menu li span {
-    font-size: 2rem; 
+    font-size: 2rem;
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
-.menu li span:hover , menu li span:focus {
+.menu li span:hover,
+menu li span:focus {
     background-color: brown;
     color: bisque;
     border-radius: 25%;
@@ -103,10 +108,12 @@ body {
 }
 
 @keyframes bouncing {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -119,11 +126,12 @@ body {
     position: relative;
     height: 100vh;
     width: 100vw;
-    padding-top: 250px;
+    padding-top: 175px;
 }
 
 /* Title and subtitle */
-.sub-title, .big-title {
+.sub-title,
+.big-title {
     position: relative;
     font-family: 'Courier New', Courier, monospace;
     font-size: 3.75rem;
@@ -134,7 +142,10 @@ body {
     transform: translateX(-50%);
 }
 
-.big-title::before, .big-title::after, .sub-title::before, .sub-title::after {
+.big-title::before,
+.big-title::after,
+.sub-title::before,
+.sub-title::after {
     content: "";
     position: absolute;
     top: 0;
@@ -154,17 +165,17 @@ body {
 .sub-title::before {
     background: var(--bg-color);
     animation: typing var(--type-animation-duration) steps(var(--sub-steps)) forwards 1s;
-    
+
 }
 
 /* sub-title blinking animation */
 .sub-title::after {
     background: black;
     width: 0.125em;
-    animation: 
+    animation:
         typing var(--type-animation-duration) steps(var(--sub-steps)) 1s 1 normal both,
         blinking 500ms steps(var(--sub-steps)) infinite,
-        stop-blinking 500ms steps(var(--sub-steps)) forwards calc(var(--type-animation-duration) + 1.45s); 
+        stop-blinking 500ms steps(var(--sub-steps)) forwards calc(var(--type-animation-duration) + 1.45s);
 }
 
 /* big-title typing animation */
@@ -178,7 +189,7 @@ body {
 .big-title::after {
     background: transparent;
     width: 0.125em;
-    animation:    
+    animation:
         typing var(--type-animation-duration) steps(var(--title-steps)) forwards calc(var(--type-animation-duration) + 1.65s),
         blinking 500ms steps(var(--title-steps)) infinite calc(var(--type-animation-duration) + 1.65s),
         stop-blinking 1 steps(1) forwards calc((var(--type-animation-duration)*2) + 4s);
@@ -195,6 +206,7 @@ body {
     from {
         background: black;
     }
+
     to {
         background: transparent;
     }
@@ -207,10 +219,43 @@ body {
 }
 
 /* === Personal profile section === */
-
-.personal-profile {
+#about-me {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(104, 47, 47)
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+.profile-pic {
+    border-radius: 100%;
+    width: 15.625rem;
+    margin-right: 1.25rem;
+}
+
+.profile-details {
+    text-align: justify;
+    margin-left: 1.25rem;
+}
+
+.profile-table {
+    margin: 0 3.125rem;
+}
+
+.profile-card {
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    animation: fly-in 1.5s ease-in forwards;
+}
+
+@keyframes fly-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    90% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
