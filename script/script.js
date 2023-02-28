@@ -16,10 +16,16 @@ function closeNav() {
   overlayNav.style.left = "-1000%";
 }
 
-// The length of the title message
-var welcomeMsg = document.querySelector(".sub-title")
-var welcomeMsgLength = welcomeMsg.textContent.length
+// The length of sub title 
+var subTitle = document.querySelector(".sub-title")
+var subTitleLength = subTitle.textContent.length
 
-document.documentElement.style.setProperty('--steps',welcomeMsgLength)
+document.documentElement.style.setProperty('--sub-steps',subTitleLength)
 
+// The length of the title
+var title = document.querySelector(".big-title")
+var titleLength = title.textContent.length
 
+console.log(titleLength)
+
+document.documentElement.style.setProperty('--title-steps',titleLength)

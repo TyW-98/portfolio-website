@@ -1,6 +1,7 @@
 :root {
     --bg-color: bisque;
-    --steps: 0;
+    --sub-steps: 0;
+    --title-steps: 0;
     --type-animation-duration: 6s;
 }
 
@@ -117,26 +118,18 @@ body {
     top: 250px;
 }
 
-.big-title {
+.sub-title, .big-title {
     position: relative;
-    top: 250px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 60pt;
     font-weight: 700;
-}
-
-.sub-title {
-    font-family:'Courier New', Courier, monospace;
-    margin-top: 50px;
-    font-size: 30pt;
-    font-weight: 500;
-    position: relative;
+    z-index: 2;
     width: max-content;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.sub-title::before, .sub-title::after {
+.big-title::before, big-title::after, .sub-title::before, .sub-title::after {
     content: "";
     position: absolute;
     top: 0;
@@ -145,28 +138,34 @@ body {
     bottom: 0;
 }
 
+.sub-title {
+    margin-top: 50px;
+    font-size: 30pt;
+    font-weight: 500;
+    z-index: 1;
+}
+
 .sub-title::before {
     background: var(--bg-color);
-    animation: typing var(--type-animation-duration) steps(var(--steps)) forwards 1s;
+    animation: typing var(--type-animation-duration) steps(var(--sub-steps)) forwards 1s;
+    
 }
 
 .sub-title::after {
     background: black;
     width: 0.125em;
     animation: 
-        typing var(--type-animation-duration) steps(var(--steps)) 1s 1 normal both,
-        blinking 500ms steps(var(--steps)) infinite,
-        stop-blinking 500ms steps(var(--steps)) forwards calc(var(--type-animation-duration) + 3s);    
+        typing var(--type-animation-duration) steps(var(--sub-steps)) 1s 1 normal both,
+        blinking 500ms steps(var(--sub-steps)) infinite,
+        stop-blinking 500ms steps(var(--sub-steps)) forwards calc(var(--type-animation-duration) + 3s); 
 }
 
-@keyframes move-subtitle {
-    0% {
-        transform: translateY(-150px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.big-title::before {
+    background: var(--bg-color);
+    animation: typing var(--type-animation-duration) steps(var(--title-steps)) forwards calc(var(--type-animation-duration) + 3.5s);
+
 }
+
 
 @keyframes typing {
     to {
