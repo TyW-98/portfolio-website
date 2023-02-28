@@ -28,16 +28,18 @@
     <!--Overlay nagivation-->
     <div id="overlayNav" class="overlay">
       <!--Overlay close button-->
-      <a href="#" class="closebtn" onclick="closeNav()"><i class="fa-regular fa-circle-xmark"></i></a>
+      <a href="#" class="closebtn" onclick="closeNav()"
+        ><i class="fa-regular fa-circle-xmark"></i
+      ></a>
 
       <!--Options-->
       <div class="nav-content">
         <ul class="menu">
-          <li><a href="#top">Home</a></li>
-          <li><a href="">About me</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="#">Download a copy of my CV</a></li>
-          <li><a href="">Contact me</a></li>
+          <li><span>Home</span></li>
+          <li><span>About me</span></li>
+          <li><span>Projects</span></li>
+          <li><span>Download a copy of my CV</span></li>
+          <li><span>Contact me</span></li>
         </ul>
         <div class="socials">
           <a href="https://github.com/TyW-98" class="link"
@@ -55,20 +57,18 @@
 
     <nav class="navbar sticky-top">
       <!--Overlay open button-->
-      <div class="openbtn" onclick="openNav()"><i class="fa-solid fa-square-caret-down"></i></div>
+      <div class="openbtn" onclick="openNav()">
+        <i class="fa-solid fa-square-caret-down"></i>
+      </div>
     </nav>
-
-    <a id="top"></a>
 
     <div data-scroll-container="">
       <section id="heading-section" data-scroll-section="">
-        <div class="container titles">
-          <div class="row">
-            <div class="col-12">
-              <div class="heading-section">
-                <p class="sub-title">Hi, my name is abc</p>
-                <h1 class="big-title">Welcome to my website.</h1>
-              </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="heading">
+              <p class="sub-title">Hi, my name is abc</p>
+              <h1 class="big-title">Welcome to my website.</h1>
             </div>
           </div>
         </div>
@@ -110,6 +110,30 @@
       const scroll = new LocomotiveScroll({
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
+      });
+
+      // Listen to which option in the overlay navigation is being clicked
+
+      const clicked = document.querySelectorAll(".menu li");
+
+      clicked.forEach((option) => {
+        option.addEventListener("click", function (event) {
+          event.preventDefault();
+          const clickedElement = event.target;
+
+          let output;
+          if (clickedElement.textContent.toLowerCase() === "home") {
+            output = "heading-section";
+          } else if (clickedElement.textContent.toLowerCase() === "about me") {
+            output = "about-me";
+          } else {
+            output = clickedElement.textContent;
+          }
+
+          const target = document.getElementById(output);
+
+          scroll.scrollTo(target);
+        });
       });
     </script>
   </body>

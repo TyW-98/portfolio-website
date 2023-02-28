@@ -44,5 +44,3 @@ console.log(titleLength);
 document.documentElement.style.setProperty('--title-steps',titleLength);
 
 
-
-

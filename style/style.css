@@ -66,17 +66,18 @@ body {
 }
 
 /* Overlay navigation options text */
-.menu li a {
+.menu li span {
     font-size: 2rem; 
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
-.menu li a:hover , menu li a:focus {
+.menu li span:hover , menu li span:focus {
     background-color: brown;
     color: bisque;
     border-radius: 25%;
+    cursor: pointer;
 }
 
 /* Social icon div */
@@ -116,9 +117,9 @@ body {
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 20rem;
     height: 100vh;
     width: 100vw;
+    padding-top: 250px;
 }
 
 /* Title and subtitle */
