@@ -62,7 +62,7 @@
     </nav>
 
     <div data-scroll-container="">
-      <div id='home' class="container-fluid" data-scroll-section="">
+      <div id="home" class="container-fluid" data-scroll-section="">
         <div class="row">
           <div class="website-icon">
             <i class="fa-solid fa-t"></i>
@@ -121,10 +121,33 @@
       </div>
       <section id="second-section" data-scroll-section=""></section>
       <section id="third-section" data-scroll-section=""></section>
-      
 
       <footer>
-        <section id="footer" data-scroll-section=""></section>
+        <section id="footer" data-scroll-section="">
+          <div class='row'>
+          <div class="footer-icons">
+            <a href="https://github.com/TyW-98" class="footer-link"
+              ><i class="fa-brands fa-github footer-icon"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/yitwey-tam/" class="footer-link"
+              ><i class="fa-brands fa-linkedin footer-icon"></i
+            ></a>
+            <a href="mailto:email.com" class="footer-link"
+              ><i class="fa fa-envelope" aria-hidden="true"></i
+            ></a>
+          </div>
+          </div>
+          <div class="row">
+            <div class="footer-website-icon">
+              <i class="fa-solid fa-t"></i>
+              <i class="fa-solid fa-y"></i>
+              <i class="fa-solid fa-w"></i>
+              <i class="fa-solid fa-angles-right"></i>
+              <i class="fa-solid fa-9"></i>
+              <i class="fa-solid fa-8"></i>
+            </div>
+          </div>
+        </section>
       </footer>
     </div>
     <!-- Font Awesome script -->
@@ -169,8 +192,7 @@
         option.addEventListener("click", function (event) {
           event.preventDefault();
           const clickedElement = event.target;
-          output = clickedElement.textContent.toLowerCase();;
-
+          output = clickedElement.textContent.toLowerCase();
 
           const target = document.getElementById(output);
 

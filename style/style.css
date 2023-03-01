@@ -23,7 +23,7 @@ section {
 }
 
 /* Website top left icons  */
-.website-icon {
+.footer-website-icon, .website-icon {
     position: relative;
     margin-left: 3.125rem;
     margin-top: 0.625rem;
@@ -291,17 +291,33 @@ menu li span:focus {
     background-color: #e7dabc;
 }
 
-/* Second Section */
+/* Third Section */
 #third-section {
     background-color: var(--bg-color);
 }
 
-/* Second Section */
+/* footer Section */
 #footer {
     border-top: solid 2.5px black;
     background-color:#876445c2;
-    height: max-content;
+    text-align: center;
+    height: 16vh;
 }
+
+.footer-icons {
+    margin-top: 0.9375rem;
+}
+
+.footer-icons a {
+    color: rgb(61, 60, 60);
+    font-size: 16pt;
+    margin: 0 0.9375rem 0;
+}
+
+.footer-website-icon {
+    margin: 0.625rem auto;
+}
+
 
 @media (max-width:1460px) {
 
