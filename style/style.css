@@ -232,10 +232,22 @@ menu li span:focus {
     }
 }
 
+/* Introduction text */
+.intro-text {
+    width:90%;
+}
+
 /* Download CV button */
+.intro-btn-row {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
 .download-cv-btn {
     background-color: rgb(12, 53, 87);
     border: solid 1px black;
+    margin: 0 30px;
 }
 
 .download-cv-btn:hover {
@@ -246,10 +258,12 @@ menu li span:focus {
 .download-cv-btn a {
     text-decoration: none;
     color: rgb(247, 247, 247);
+    
 }
 
 .mail-btn {
-    background-color: rgb(255, 255, 255)
+    background-color: rgb(255, 255, 255);
+    margin: 0 30px;
 }
 
 .mail-btn:hover {
@@ -266,3 +280,26 @@ menu li span:focus {
     background-color: white;
 }
 
+.profile-picture {
+    position: absolute;
+    width: max-content;
+    right: 200px;
+}
+
+.profile-img {
+    width: 85%;
+    border-radius: 100%;
+}
+
+@media (max-width:1460px) {
+    .profile-picture {
+        position: absolute;
+        right: -150px;
+        width: max-content;
+        top: 150px;
+    }
+
+    .profile-img {
+        width: 65%;
+    }
+}
