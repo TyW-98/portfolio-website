@@ -1,5 +1,5 @@
 :root {
-    --bg-color: bisque;
+    --bg-color: #FAF3E0;
     --sub-steps: 0;
     --title-steps: 0;
     --type-animation-duration: 2.5s;
@@ -274,12 +274,6 @@ menu li span:focus {
     text-decoration: none;
 }
 
-/* Second Section */
-#second-section {
-    border-top: double 2px black;
-    background-color: white;
-}
-
 .profile-picture {
     position: absolute;
     width: max-content;
@@ -289,6 +283,24 @@ menu li span:focus {
 .profile-img {
     width: 85%;
     border-radius: 100%;
+}
+
+/* Second Section */
+#second-section {
+    border-top: double 2px black;
+    background-color: #e7dabc;
+}
+
+/* Second Section */
+#third-section {
+    background-color: var(--bg-color);
+}
+
+/* Second Section */
+#footer {
+    border-top: solid 2.5px black;
+    background-color:#876445c2;
+    height: max-content;
 }
 
 @media (max-width:1460px) {
