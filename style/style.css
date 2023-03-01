@@ -142,7 +142,7 @@ menu li span:focus {
     height: 65vh;
     width: 50vw;
     padding-top: 3.125rem;
-    padding-left: 6.25rem;
+    padding-left: 9.375rem;
 }
 
 /* Title and subtitle */
@@ -292,11 +292,34 @@ menu li span:focus {
 }
 
 @media (max-width:1460px) {
+
+    /* Overlay Navigation */
+
+    .nav-content {
+        top: 10%;
+    }
+
+    .menu li {
+        margin: 10% 0;
+    }
+
+
+    /* Heading Section */
+
+    #heading-section {
+        text-align: left;
+        position: relative;
+        height: 65vh;
+        width: 50vw;
+        padding-top: 3.125rem;
+        padding-left: 6.25rem;
+    }
+
     .profile-picture {
         position: absolute;
-        right: -150px;
+        right: -9.375rem;
         width: max-content;
-        top: 150px;
+        top: 9.375rem;
     }
 
     .profile-img {

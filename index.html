@@ -38,8 +38,7 @@
           <li><span>Home</span></li>
           <li><span>Projects</span></li>
           <li><span>Education History</span></li>
-          <li><span>Download a copy of my CV</span></li>
-          <li><span>Contact me</span></li>
+          <li><span>Skills</span></li>
         </ul>
         <div class="socials">
           <a href="https://github.com/TyW-98" class="link"
@@ -63,7 +62,7 @@
     </nav>
 
     <div data-scroll-container="">
-      <div class="container-fluid" data-scroll-section="">
+      <div id='home' class="container-fluid" data-scroll-section="">
         <div class="row">
           <div class="website-icon">
             <i class="fa-solid fa-t"></i>
@@ -74,9 +73,14 @@
             <i class="fa-solid fa-8"></i>
           </div>
         </div>
+      </div>
       <div class="container-fluid" data-scroll-section="">
         <div class="profile-picture">
-          <img class="profile-img" src="images/profile-image.jpg" alt="profile-pic">
+          <img
+            class="profile-img"
+            src="images/profile-image.jpg"
+            alt="profile-pic"
+          />
         </div>
         <section id="heading-section" data-scroll-section>
           <div class="row">
@@ -88,19 +92,29 @@
           <div class="row">
             <div class="intro-text">
               <p>
-                Flippity floppity jibber jabber, blibber blabbering flubber dubber. 
-                Wibbly wobbly dilly dally, snickering snickerdoodles tallying tiddlywinks. 
-                Flibbertigibbets frolic in the frumpy forest, flouncing and bouncing with 
-                flimflam finesse. Gobbling gobbledygook gallops through the green grass, 
-                gazing at the glimmering galaxy. Blathering blatherskites babble in the blustery 
-                breeze, boasting and bickering with ballyhoo bravado.
+                Flippity floppity jibber jabber, blibber blabbering flubber
+                dubber. Wibbly wobbly dilly dally, snickering snickerdoodles
+                tallying tiddlywinks. Flibbertigibbets frolic in the frumpy
+                forest, flouncing and bouncing with flimflam finesse. Gobbling
+                gobbledygook gallops through the green grass, gazing at the
+                glimmering galaxy. Blathering blatherskites babble in the
+                blustery breeze, boasting and bickering with ballyhoo bravado.
               </p>
             </div>
           </div>
           <div class="row">
             <div class="intro-btn-row">
-              <button type="button" class="btn btn-lg download-cv-btn"><a href="pdf/CV.pdf" download><i class="fa-solid fa-file-invoice"></i> Get my CV</a></button>
-              <button type="button" class="btn btn-lg mail-btn"><a href="mailto:email@email.com?subject= Enquiry from portfolio website"><i class="fa-solid fa-envelope-open-text"></i> Contact me</a></button>
+              <button type="button" class="btn btn-lg download-cv-btn">
+                <a href="pdf/CV.pdf" download
+                  ><i class="fa-solid fa-file-invoice"></i> Get my CV</a
+                >
+              </button>
+              <button type="button" class="btn btn-lg mail-btn">
+                <a
+                  href="mailto:email@email.com?subject= Enquiry from portfolio website"
+                  ><i class="fa-solid fa-envelope-open-text"></i> Contact me</a
+                >
+              </button>
             </div>
           </div>
         </section>
@@ -149,15 +163,8 @@
         option.addEventListener("click", function (event) {
           event.preventDefault();
           const clickedElement = event.target;
+          output = clickedElement.textContent.toLowerCase();;
 
-          let output;
-          if (clickedElement.textContent.toLowerCase() === "home") {
-            output = "heading-section";
-          } else if (clickedElement.textContent.toLowerCase() === "about me") {
-            output = "about-me";
-          } else {
-            output = clickedElement.textContent;
-          }
 
           const target = document.getElementById(output);
 
