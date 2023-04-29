@@ -11,26 +11,26 @@ const typewriter = new Typewriter(introHeading, {
   autoStart: true,
 });
 
-function consoleTyping() {
-  return new Promise((resolve, reject) => {
-    typewriter
-      .typeString(' explorer "https://www.google.com"')
-      .start()
-      .callFunction(() => {
-        resolve();
-      });
-  });
-}
+// function consoleTyping() {
+//   return new Promise((resolve, reject) => {
+//     typewriter
+//       .typeString(' explorer "https://www.google.com"')
+//       .start()
+//       .callFunction(() => {
+//         resolve();
+//       });
+//   });
+// }
 
-consoleTyping().then(() => {
-  const cursor = document.getElementsByClassName("Typewriter__cursor")[0];
-  cursor.innerHTML = "";
-  newConsoleRow.style.visibility = "visible";
-  setTimeout(() => {
-    console.classList.add("hide");
-    newConsoleRow.innerHTML = "";
-    footer.classList.add("show");
-    header.classList.add("show");
-    welMsg.classList.add("show");
-  }, 1500);
-});
+// consoleTyping().then(() => {
+//   const cursor = document.getElementsByClassName("Typewriter__cursor")[0];
+//   cursor.innerHTML = "";
+//   newConsoleRow.style.visibility = "visible";
+//   setTimeout(() => {
+//     console.classList.add("hide");
+//     newConsoleRow.innerHTML = "";
+//     footer.classList.add("show");
+//     header.classList.add("show");
+//     welMsg.classList.add("show");
+//   }, 1500);
+// });

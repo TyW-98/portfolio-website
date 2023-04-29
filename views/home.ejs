@@ -1,7 +1,54 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TyW</title>
 
-<div class="home-content">
-  <div class="console">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="home-body">
+    <header class="welcome-header">
+      <div class="welcome-message">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Passionate about creating elegant web solutions</p>
+      </div>
+    </header>
+    <nav class="navbar-column">
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">ABOUT ME</a></li>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="#">EDUCATION</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="navbar-social-icons">
+        <ul>
+          <li><a target="_blank" class="home-social-icons"><i class="fa-brands fa-github"></i></a></li>
+          <li><a target="_blank" class="home-social-icons"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a target="_blank" class="home-social-icons"><i class="fa-regular fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
+<!-- TODO: Do it so that welcome message one side navbar on another side refer to ipad -->
+
+<!-- <div class="console">
     <div class="console-header">
       <span class="console-title">Command Prompt</span>
       <div class="console-buttons">
@@ -15,11 +62,4 @@
       <p>C:\> <span class="console-text"></span></p>
       <p class="new-console-row">C:\></p>
     </div>
-  </div>
-
-  <div class="welcome-message">
-        <h1>Welcome to my website</h1>
-  </div>
-</div>
-
-<%- include('partials/footer') %>
+  </div> -->
