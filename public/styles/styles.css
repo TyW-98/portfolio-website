@@ -3,8 +3,13 @@
     padding: 0;
 }
 
+body,
+html {
+    height: 100vh;
+}
+
 body {
-    background-color: rgb(1, 1, 59);
+    background-color: rgba(4, 28, 109, 0.719);
     margin: 0 150px 0 250px;
 }
 
@@ -45,17 +50,102 @@ body {
     color: rgb(95, 79, 7);
 }
 
+.wrapper {
+    min-height: calc(100vh - 150px);
+}
+
 /* Footer */
+#footer {
+    position: relative;
+    height: 50px;
+}
+
 .footer-text {
     color: white;
     font-weight: 600;
 }
 
-.social-icons i{
+.social-icons i {
     font-size: 25pt;
     color: white;
 }
 
 .social-icons i:hover {
     color: rgb(123, 128, 128);
+}
+
+/* Home */
+/* .home-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding-bottom: 50px;
+    position: relative;
+    top: 150px;
+    margin-left: 50px;
+    text-align: center;
+} */
+
+#intro-text {
+    color: white;
+    font-weight: 600;
+}
+
+
+/* Home page console */
+.console {
+    background-color: black;
+    width: 750px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    border: solid 3px white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.console-title {
+    font-size: 1.2rem;
+}
+
+.console-buttons {
+    display: flex;
+    margin-right: 5px;
+}
+
+.console-button {
+    margin-left: 20px;
+    font-size: 16pt;
+}
+
+.console-body{
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color:rgb(48, 182, 15)
+}
+
+.console-body p:last-of-type {
+    display: inline-block;
+}
+
+.console-text {
+    display: inline-block;
+}
+
+.new-console-row {
+    visibility: hidden;
 }
