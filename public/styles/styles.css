@@ -11,12 +11,15 @@ html {
 body {
     background-color: rgba(4, 28, 109, 0.719);
     margin: 0 150px 0 250px;
+    overflow-y: hidden;
 }
 
 /* Header */
 
 .navbar {
     border-bottom: solid grey;
+    transition: all 0.75s ease-in-out;
+    opacity: 0;
 }
 
 #navbarNav {
@@ -58,6 +61,8 @@ body {
 #footer {
     position: relative;
     height: 50px;
+    transition: all 0.75s ease-in-out;
+    opacity: 0;
 }
 
 .footer-text {
@@ -91,6 +96,17 @@ body {
     font-weight: 600;
 }
 
+.welcome-message {
+    text-align: center;
+    z-index: 0;
+    transition: all 0.75s ease-in-out;
+}
+
+.navbar.show, #footer.show, .welcome-message.show {
+    opacity: 1;
+    transform: translateY(0)
+}
+
 
 /* Home page console */
 .console {
@@ -105,6 +121,13 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+
+.console.hide {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 .console-header {
