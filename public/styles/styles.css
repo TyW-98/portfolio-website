@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: rgba(4, 28, 109, 0.719);
+    margin: 0 150px 0 250px;
+    overflow-y: hidden;
+}
+
+/* Header */
+
+.navbar {
+    border-bottom: solid grey;
+    transition: all 0.75s ease-in-out;
+    /* opacity: 0; */
+}
+
+#navbarNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-logo {
+    width: 65px;
+    height: 65px;
+    margin-top: 10px;
+}
+
+.branding {
+    color: white;
+    margin-left: 15px;
+}
+
+.nav-item {
+    margin-left: 25px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: rgb(196, 162, 11);
+    font-weight: 600;
+    font-size: 16pt;
+}
+
+.nav-item a:hover {
+    color: rgb(95, 79, 7);
+}
+
+.wrapper {
+    min-height: calc(100vh - 150px);
+}
+
+/* Footer */
+#footer {
+    position: relative;
+    height: 50px;
+    transition: all 0.75s ease-in-out;
+    /* opacity: 0; */
+}
+
+.footer-text {
+    color: white;
+    font-weight: 600;
+}
+
+.social-icons i {
+    font-size: 25pt;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.social-icons i:hover {
+    color: rgb(123, 128, 128);
+}
+
+/* Home */
+/* .home-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding-bottom: 50px;
+    position: relative;
+    top: 150px;
+    margin-left: 50px;
+    text-align: center;
+} */
+
+#intro-text {
+    color: white;
+    font-weight: 600;
+}
+
+.home-body {
+    padding: 0;
+    margin: 0;
+}
+
+.welcome-header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.navbar-column {
+    background-color: white;
+    color: black;
+    position: fixed;
+    width: 43.75rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    padding-top: 175px;
+}
+
+.navbar-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-column ul li {
+    margin: 2rem 0;
+}
+
+.navbar-column ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+.navbar-links ul li a:hover {
+    animation: slideIn 0.5s;
+}
+
+.navbar-social-icons {
+    margin-top: 100px;
+}
+
+.navbar-social-icons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-social-icons {
+    margin: 0 30px;
+}
+
+.home-social-icons i {
+    cursor: pointer;
+    font-size: 25pt;
+}
+
+.home-social-icons i:hover {
+    color: blue;
+    animation: bouncing 1s infinite;
+}
+
+@keyframes bouncing {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.navbar.show,
+#footer.show,
+.welcome-message.show {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+
+/* Home page console */
+.console {
+    background-color: black;
+    width: 750px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    border: solid 3px white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+
+.console.hide {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.console-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.console-title {
+    font-size: 1.2rem;
+}
+
+.console-buttons {
+    display: flex;
+    margin-right: 5px;
+}
+
+.console-button {
+    margin-left: 20px;
+    font-size: 16pt;
+}
+
+.console-body {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(48, 182, 15)
+}
+
+.console-body p:last-of-type {
+    display: inline-block;
+}
+
+.console-text {
+    display: inline-block;
+}
+
+.new-console-row {
+    visibility: hidden;
+}
