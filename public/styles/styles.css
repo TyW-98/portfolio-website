@@ -19,7 +19,6 @@ body {
 .navbar {
     border-bottom: solid grey;
     transition: all 0.75s ease-in-out;
-    /* opacity: 0; */
 }
 
 #navbarNav {
@@ -62,7 +61,6 @@ body {
     position: relative;
     height: 3.125rem;
     transition: all 0.75s ease-in-out;
-    /* opacity: 0; */
 }
 
 .footer-text {
@@ -80,17 +78,11 @@ body {
     color: rgb(123, 128, 128);
 }
 
-/* Home */
-/* .home-content {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    padding-bottom: 3.125rem;
-    position: relative;
-    top: 9.375rem;
-    margin-left: 3.125rem;
-    text-align: center;
-} */
+/* Home page */
+
+.landing-page {
+    visibility: hidden;
+}
 
 #intro-text {
     color: white;
@@ -122,7 +114,7 @@ body {
     z-index: 5;
     justify-content: center;
     align-items: center;
-    padding-top: 15.625rem;
+    padding-top: 12.5rem;
 }
 
 .navbar-column ul {
@@ -200,22 +192,16 @@ body {
     }
 }
 
-.navbar.show,
-#footer.show,
-.welcome-message.show {
-    opacity: 1;
-    transform: translateY(0)
-}
-
 
 /* Home page console */
 .console {
     background-color: black;
     width: 46.875rem;
     height: 34.375rem;
-    margin: auto;
-    position: relative;
+    margin: 0 auto;
+    position: absolute;
     top: 9.375rem;
+    left: 32.5%;
     border: solid .1875rem white;
     border-radius: .625rem;
     overflow: hidden;
