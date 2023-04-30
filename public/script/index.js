@@ -3,7 +3,7 @@ const Typewriter = window.Typewriter;
 const console = document.getElementsByClassName("console")[0];
 const introHeading = document.getElementsByClassName("console-text")[0];
 const newConsoleRow = document.getElementsByClassName("new-console-row")[0];
-const welMsg = document.getElementsByClassName("welcome-message")[0];
+const landingPage = document.getElementsByClassName("landing-page")[0];
 
 const typewriter = new Typewriter(introHeading, {
   autoStart: true,
@@ -27,8 +27,6 @@ consoleTyping().then(() => {
   setTimeout(() => {
     console.classList.add("hide");
     newConsoleRow.innerHTML = "";
-    footer.classList.add("show");
-    header.classList.add("show");
-    welMsg.classList.add("show");
+    landingPage.classList.add("show");
   }, 1500);
 });

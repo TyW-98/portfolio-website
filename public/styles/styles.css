@@ -81,7 +81,13 @@ body {
 /* Home page */
 
 .landing-page {
-    visibility: hidden;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.landing-page.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #intro-text {
