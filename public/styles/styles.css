@@ -106,7 +106,10 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
-    margin: 0 auto;
+}
+
+.welcome-message {
+    margin-left: calc((100% - 46rem)/2);
 }
 
 .navbar-column {
@@ -145,8 +148,8 @@ body {
 }
 
 .navbar-links ul li a:hover {
-    animation: slideIn 0.5s ease-in-out;
     background-color: chocolate;
+    transition: all 0.5s ease-in-out;
 }
 
 .navbar-social-icons {
@@ -183,18 +186,6 @@ body {
 
     50% {
         transform: translateY(-0.625rem);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-0.625rem);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
     }
 }
 
