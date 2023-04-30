@@ -21,45 +21,61 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body class="home-body">
-    <header class="welcome-header">
-      <div class="welcome-message">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Passionate about creating elegant web solutions</p>
+    <div class="landing-page">
+      <header class="welcome-header">
+        <div class="welcome-message">
+          <h1>Welcome to My Portfolio</h1>
+          <p>Passionate about creating elegant web solutions</p>
+        </div>
+      </header>
+      <nav class="navbar-column">
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">ABOUT ME</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">EDUCATION</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="navbar-social-icons">
+          <ul>
+            <li>
+              <a target="_blank" class="home-social-icons"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" class="home-social-icons"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" class="home-social-icons"
+                ><i class="fa-regular fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="console">
+      <div class="console-header">
+        <span class="console-title">Command Prompt</span>
+        <div class="console-buttons">
+          <i class="fa-sharp fa-regular fa-window-minimize console-button"></i>
+          <i class="fa-sharp fa-regular fa-window-maximize console-button"></i>
+          <i class="fa-solid fa-xmark console-button"></i>
+        </div>
       </div>
-    </header>
-    <nav class="navbar-column">
-      <div class="navbar-links">
-        <ul>
-          <li><a href="#">ABOUT ME</a></li>
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">EDUCATION</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
+      <div class="console-body">
+        <p>Welcome to Command Prompt. Type "help" to see available commands.</p>
+        <p>C:\> <span class="console-text"></span></p>
+        <p class="new-console-row">C:\></p>
       </div>
-      <div class="navbar-social-icons">
-        <ul>
-          <li><a target="_blank" class="home-social-icons"><i class="fa-brands fa-github"></i></a></li>
-          <li><a target="_blank" class="home-social-icons"><i class="fa-brands fa-linkedin"></i></a></li>
-          <li><a target="_blank" class="home-social-icons"><i class="fa-regular fa-envelope"></i></a></li>
-        </ul>
-      </div>
-    </nav>
+    </div>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="script/index.js"></script>
   </body>
 </html>
 <!-- TODO: Do it so that welcome message one side navbar on another side refer to ipad -->
-
-<!-- <div class="console">
-    <div class="console-header">
-      <span class="console-title">Command Prompt</span>
-      <div class="console-buttons">
-        <i class="fa-sharp fa-regular fa-window-minimize console-button"></i>
-        <i class="fa-sharp fa-regular fa-window-maximize console-button"></i>
-        <i class="fa-solid fa-xmark console-button"></i>
-      </div>
-    </div>
-    <div class="console-body">
-      <p>Welcome to Command Prompt. Type "help" to see available commands.</p>
-      <p>C:\> <span class="console-text"></span></p>
-      <p class="new-console-row">C:\></p>
-    </div>
-  </div> -->
