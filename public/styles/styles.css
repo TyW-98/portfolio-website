@@ -10,7 +10,7 @@ html {
 
 body {
     background-color: rgba(4, 28, 109, 0.719);
-    margin: 0 150px 0 250px;
+    margin: 0 9.375rem 0 15.625rem;
     overflow-y: hidden;
 }
 
@@ -28,18 +28,18 @@ body {
 }
 
 .navbar-logo {
-    width: 65px;
-    height: 65px;
-    margin-top: 10px;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    margin-top: .625rem;
 }
 
 .branding {
     color: white;
-    margin-left: 15px;
+    margin-left: .9375rem;
 }
 
 .nav-item {
-    margin-left: 25px;
+    margin-left: 1.5625rem;
 }
 
 .nav-item a {
@@ -54,13 +54,13 @@ body {
 }
 
 .wrapper {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 9.375rem);
 }
 
 /* Footer */
 #footer {
     position: relative;
-    height: 50px;
+    height: 3.125rem;
     transition: all 0.75s ease-in-out;
     /* opacity: 0; */
 }
@@ -73,7 +73,7 @@ body {
 .social-icons i {
     font-size: 25pt;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: .9375rem;
 }
 
 .social-icons i:hover {
@@ -85,10 +85,10 @@ body {
     display: flex;
     height: 100%;
     flex-direction: column;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     position: relative;
-    top: 150px;
-    margin-left: 50px;
+    top: 9.375rem;
+    margin-left: 3.125rem;
     text-align: center;
 } */
 
@@ -122,7 +122,7 @@ body {
     z-index: 5;
     justify-content: center;
     align-items: center;
-    padding-top: 175px;
+    padding-top: 15.625rem;
 }
 
 .navbar-column ul {
@@ -143,14 +143,16 @@ body {
     text-decoration: none;
     font-size: 25pt;
     font-weight: bold;
+    padding: 10px;
 }
 
 .navbar-links ul li a:hover {
-    animation: slideIn 0.5s;
+    animation: slideIn 0.5s ease-in-out;
+    background-color: chocolate;
 }
 
 .navbar-social-icons {
-    margin-top: 100px;
+    margin-top: 6.25rem;
 }
 
 .navbar-social-icons ul {
@@ -161,7 +163,7 @@ body {
 }
 
 .home-social-icons {
-    margin: 0 30px;
+    margin: 0 1.875rem;
 }
 
 .home-social-icons i {
@@ -182,13 +184,13 @@ body {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-0.625rem);
     }
 }
 
 @keyframes slideIn {
     0% {
-        transform: translateX(-10px);
+        transform: translateX(-0.625rem);
         opacity: 0;
     }
 
@@ -209,13 +211,13 @@ body {
 /* Home page console */
 .console {
     background-color: black;
-    width: 750px;
-    height: 550px;
+    width: 46.875rem;
+    height: 34.375rem;
     margin: auto;
     position: relative;
-    top: 150px;
-    border: solid 3px white;
-    border-radius: 10px;
+    top: 9.375rem;
+    border: solid .1875rem white;
+    border-radius: .625rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -233,26 +235,26 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 5px 10px;
+    padding: .3125rem .625rem;
     cursor: pointer;
 }
 
 .console-title {
-    font-size: 1.2rem;
+    font-size: 19.2px;
 }
 
 .console-buttons {
     display: flex;
-    margin-right: 5px;
+    margin-right: .3125rem;
 }
 
 .console-button {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     font-size: 16pt;
 }
 
 .console-body {
-    padding: 10px;
+    padding: .625rem;
     height: 100%;
     display: flex;
     flex-direction: column;
