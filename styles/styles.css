@@ -9,76 +9,11 @@ html {
 }
 
 body {
-    background-color: rgba(4, 28, 109, 0.719);
-    margin: 0 9.375rem 0 15.625rem;
-}
-
-/* Header */
-
-.navbar {
-    border-bottom: solid grey;
-    transition: all 0.75s ease-in-out;
-}
-
-#navbarNav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar-logo {
-    width: 4.0625rem;
-    height: 4.0625rem;
-    margin-top: .625rem;
-}
-
-.branding {
-    color: white;
-    margin-left: .9375rem;
-}
-
-.nav-item {
-    margin-left: 1.5625rem;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: rgb(196, 162, 11);
-    font-weight: 600;
-    font-size: 16pt;
-}
-
-.nav-item a:hover {
-    color: rgb(95, 79, 7);
-}
-
-.wrapper {
-    min-height: calc(100vh - 9.375rem);
-}
-
-/* Footer */
-#footer {
-    position: relative;
-    height: 3.125rem;
-    transition: all 0.75s ease-in-out;
-}
-
-.footer-text {
-    color: white;
-    font-weight: 600;
-}
-
-.social-icons i {
-    font-size: 25pt;
-    color: white;
-    margin-bottom: .9375rem;
-}
-
-.social-icons i:hover {
-    color: rgb(123, 128, 128);
+    background-color: black;
 }
 
 /* Home page */
-
+#content,
 .landing-page {
     opacity: 0;
     transition: 1s ease-in-out;
@@ -92,11 +27,6 @@ body {
 #intro-text {
     color: white;
     font-weight: 600;
-}
-
-.home-body {
-    padding: 0;
-    margin: 0;
 }
 
 .welcome-header {
@@ -123,6 +53,15 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 12.5rem;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+#content.show, 
+.navbar-column.show,
+.landing-page.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .navbar-column ul {
@@ -191,7 +130,7 @@ body {
 
 /* Home page console */
 .console {
-    background-color: black;
+    background-color: rgb(78, 76, 76);
     width: 46.875rem;
     height: 34.375rem;
     margin: 0 auto;
@@ -256,6 +195,11 @@ body {
 }
 
 .testing {
-    height: 100%;
+    height: 100vh;
     background-color: red;
+}
+
+.testing1 {
+    height: 100vh;
+    background-color: blue;
 }
