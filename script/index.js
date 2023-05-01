@@ -7,14 +7,27 @@ const landingPage = document.getElementsByClassName("landing-page")[0];
 const navbar = document.getElementsByClassName("navbar-column")[0];
 const mainContent = document.getElementById("content");
 
-
-const typewriter = new Typewriter(introHeading, {
-  autoStart: true,
-});
-
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
+});
+
+const clicked = document.querySelectorAll(".section-options");
+
+clicked.forEach((option) => {
+  option.addEventListener("click", function (event) {
+    event.preventDefault();
+    const clickedElement = event.target;
+    output = clickedElement.getAttribute("value");
+
+    const target = document.getElementById(output);
+
+    scroll.scrollTo(target);
+  });
+});
+
+const typewriter = new Typewriter(introHeading, {
+  autoStart: true,
 });
 
 function consoleTyping() {
