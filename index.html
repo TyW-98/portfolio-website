@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TyW</title>
 
-    <!-- Locomotive CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
-    />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -24,46 +18,15 @@
       crossorigin="anonymous"
     />
 
+    <!-- Locomotive CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    />
+
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <body class="home-body">
-    <div class="landing-page">
-      <header class="welcome-header">
-        <div class="welcome-message">
-          <h1>Welcome to My Portfolio</h1>
-          <p>Passionate about creating elegant web solutions</p>
-        </div>
-      </header>
-      <nav class="navbar-column">
-        <div class="navbar-links">
-          <ul>
-            <li><a href="#">ABOUT ME</a></li>
-            <li><a href="#">PROJECTS</a></li>
-            <li><a href="#">EDUCATION</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-        </div>
-        <div class="navbar-social-icons">
-          <ul>
-            <li>
-              <a target="_blank" class="home-social-icons"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" class="home-social-icons"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" class="home-social-icons"
-                ><i class="fa-regular fa-envelope"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <body>
     <div class="console">
       <div class="console-header">
         <span class="console-title">Command Prompt</span>
@@ -79,8 +42,51 @@
         <p class="new-console-row">C:\></p>
       </div>
     </div>
-    <div class="testing"></div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <section>
+      <div class="navbar">
+        <nav class="navbar-column">
+          <div class="navbar-links">
+            <ul>
+              <li><a href="#">ABOUT ME</a></li>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">EDUCATION</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="navbar-social-icons">
+            <ul>
+              <li>
+                <a target="_blank" class="home-social-icons"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a target="_blank" class="home-social-icons"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a target="_blank" class="home-social-icons"
+                  ><i class="fa-regular fa-envelope"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div data-scroll-container>
+        <div class="landing-page" data-scroll-section>
+          <div class="welcome-header">
+            <div class="welcome-message">
+              <h1 data-scroll>Welcome to My Portfolio</h1>
+              <p data-scroll>Passionate about creating elegant web solutions</p>
+            </div>
+          </div>
+        </div>
+        <section class="testing" data-scroll-section></section>
+      </div>
+    </section>
+
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="script/index.js"></script>
   </body>
