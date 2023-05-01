@@ -4,6 +4,7 @@ const console = document.getElementsByClassName("console")[0];
 const introHeading = document.getElementsByClassName("console-text")[0];
 const newConsoleRow = document.getElementsByClassName("new-console-row")[0];
 const landingPage = document.getElementsByClassName("landing-page")[0];
+const navbar = document.getElementsByClassName("navbar-column")[0];
 
 const typewriter = new Typewriter(introHeading, {
   autoStart: true,
@@ -28,6 +29,6 @@ consoleTyping().then(() => {
     console.classList.add("hide");
     newConsoleRow.innerHTML = "";
     landingPage.classList.add("show");
+    navbar.classList.add("show");
   }, 1500);
 });
-
