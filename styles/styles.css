@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: rgba(4, 28, 109, 0.719);
+    background-color: black;
 }
 
 /* Home page */
@@ -130,7 +130,7 @@ body {
 
 /* Home page console */
 .console {
-    background-color: black;
+    background-color: rgb(78, 76, 76);
     width: 46.875rem;
     height: 34.375rem;
     margin: 0 auto;
@@ -197,4 +197,9 @@ body {
 .testing {
     height: 100vh;
     background-color: red;
+}
+
+.testing1 {
+    height: 100vh;
+    background-color: blue;
 }
