@@ -30,3 +30,4 @@ consoleTyping().then(() => {
     landingPage.classList.add("show");
   }, 1500);
 });
+
