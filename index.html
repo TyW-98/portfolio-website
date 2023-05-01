@@ -18,6 +18,11 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    />
+
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
@@ -67,19 +72,20 @@
         </div>
       </nav>
     </div>
-    <div>
-      <div class="landing-page">
+    <div id="content" data-scroll-container>
+      <div class="landing-page" data-scroll-section>
         <div class="welcome-header">
           <div class="welcome-message">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Passionate about creating elegant web solutions</p>
+            <h1 data-scroll>Welcome to My Portfolio</h1>
+            <p data-scroll>Passionate about creating elegant web solutions</p>
           </div>
         </div>
       </div>
-      <section class="testing"></section>
+      <section class="testing" data-scroll-section></section>
     </div>
 
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="script/index.js"></script>
   </body>
 </html>

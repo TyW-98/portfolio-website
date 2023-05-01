@@ -12,50 +12,8 @@ body {
     background-color: rgba(4, 28, 109, 0.719);
 }
 
-/* Header */
-
-.navbar {
-    border-bottom: solid grey;
-    transition: all 0.75s ease-in-out;
-    visibility: hidden;
-}
-
-#navbarNav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar-logo {
-    width: 4.0625rem;
-    height: 4.0625rem;
-    margin-top: .625rem;
-}
-
-.branding {
-    color: white;
-    margin-left: .9375rem;
-}
-
-.nav-item {
-    margin-left: 1.5625rem;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: rgb(196, 162, 11);
-    font-weight: 600;
-    font-size: 16pt;
-}
-
-.nav-item a:hover {
-    color: rgb(95, 79, 7);
-}
-
-.wrapper {
-    min-height: calc(100vh - 9.375rem);
-}
 /* Home page */
-
+#content,
 .landing-page {
     opacity: 0;
     transition: 1s ease-in-out;
@@ -99,6 +57,7 @@ body {
     transition: 1s ease-in-out;
 }
 
+#content.show, 
 .navbar-column.show,
 .landing-page.show {
     opacity: 1;

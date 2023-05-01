@@ -5,9 +5,16 @@ const introHeading = document.getElementsByClassName("console-text")[0];
 const newConsoleRow = document.getElementsByClassName("new-console-row")[0];
 const landingPage = document.getElementsByClassName("landing-page")[0];
 const navbar = document.getElementsByClassName("navbar-column")[0];
+const mainContent = document.getElementById("content");
+
 
 const typewriter = new Typewriter(introHeading, {
   autoStart: true,
+});
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
 });
 
 function consoleTyping() {
@@ -30,5 +37,6 @@ consoleTyping().then(() => {
     newConsoleRow.innerHTML = "";
     landingPage.classList.add("show");
     navbar.classList.add("show");
+    content.classList.add("show");
   }, 1500);
 });
