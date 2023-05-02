@@ -12,7 +12,73 @@ body {
     background-color: black;
 }
 
-/* Home page */
+/* Console Design */
+.console {
+    background-color: rgb(78, 76, 76);
+    width: 46.875rem;
+    height: 34.375rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 9.375rem;
+    left: 32.5%;
+    border: solid .1875rem white;
+    border-radius: .625rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+
+.console.hide {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.console-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: .3125rem .625rem;
+    cursor: pointer;
+}
+
+.console-title {
+    font-size: 19.2px;
+}
+
+.console-buttons {
+    display: flex;
+    margin-right: .3125rem;
+}
+
+.console-button {
+    margin-left: 1.25rem;
+    font-size: 16pt;
+}
+
+.console-body {
+    padding: .625rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(48, 182, 15)
+}
+
+.console-body p:last-of-type {
+    display: inline-block;
+}
+
+.console-text {
+    display: inline-block;
+}
+
+.new-console-row {
+    visibility: hidden;
+}
+
+/* Home section */
 #content,
 .landing-page {
     opacity: 0;
@@ -57,7 +123,7 @@ body {
     transition: 1s ease-in-out;
 }
 
-#content.show, 
+#content.show,
 .navbar-column.show,
 .landing-page.show {
     opacity: 1;
@@ -127,71 +193,19 @@ body {
     }
 }
 
+/* About Section */
 
-/* Home page console */
-.console {
-    background-color: rgb(78, 76, 76);
-    width: 46.875rem;
-    height: 34.375rem;
-    margin: 0 auto;
-    position: absolute;
-    top: 9.375rem;
-    left: 32.5%;
-    border: solid .1875rem white;
-    border-radius: .625rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
+
+#about,
+#projects,
+#contact {
+    height: 100vh;
+    color: white;
+    font-size: 25pt
 }
 
-.console.hide {
-    opacity: 0;
-    transform: translateY(100%);
-}
+.about-content {
 
-.console-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: .3125rem .625rem;
-    cursor: pointer;
-}
-
-.console-title {
-    font-size: 19.2px;
-}
-
-.console-buttons {
-    display: flex;
-    margin-right: .3125rem;
-}
-
-.console-button {
-    margin-left: 1.25rem;
-    font-size: 16pt;
-}
-
-.console-body {
-    padding: .625rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: rgb(48, 182, 15)
-}
-
-.console-body p:last-of-type {
-    display: inline-block;
-}
-
-.console-text {
-    display: inline-block;
-}
-
-.new-console-row {
-    visibility: hidden;
 }
 
 .testing {
@@ -199,9 +213,4 @@ body {
     background-color: black;
     color: white;
     font-size: 25pt;
-}
-
-.testing1 {
-    height: 100vh;
-    background-color: blue;
 }
