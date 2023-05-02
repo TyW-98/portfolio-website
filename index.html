@@ -46,9 +46,15 @@
         <div class="navbar-links">
           <ul>
             <li><a href="" class="section-options" value="home">HOME</a></li>
-            <li><a href="" class="section-options" value="about">ABOUT ME</a></li>
-            <li><a href="" class="section-options" value="projects">PROJECTS</a></li>
-            <li><a href="" class="section-options" value="contact">CONTACT</a></li>
+            <li>
+              <a href="" class="section-options" value="about">ABOUT ME</a>
+            </li>
+            <li>
+              <a href="" class="section-options" value="projects">PROJECTS</a>
+            </li>
+            <li>
+              <a href="" class="section-options" value="contact">CONTACT</a>
+            </li>
             <li><a href="pdf/WD_CV.pdf" target="_blank">RESUME</a></li>
           </ul>
         </div>
@@ -73,7 +79,7 @@
         </div>
       </nav>
     </div>
-    <div id="content" class="container-fluid" data-scroll-container >
+    <div id="content" class="container-fluid" data-scroll-container>
       <section id="home" data-scroll-section data-scroll>
         <div class="landing-page" data-scroll-section>
           <div class="welcome-header">
@@ -100,9 +106,57 @@
       </section>
 
       <section id="contact" class="testing" data-scroll-section data-scroll>
-        <div class="contact-content">
-          <h2 data-scroll>About Me</h2>
-          <p data-scroll>This is the about section.</p>
+        <div class="contact-form">
+          <form
+            action="https://formsubmit.co/480fb8dd7e8731eed14b34cabffbc400"
+            method="POST"
+          >
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Preferred name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="email@example.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                name="_subject"
+                placeholder="Subject"
+                required
+              />
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-large btn-info">SEND</button>
+          </form>
         </div>
       </section>
     </div>
