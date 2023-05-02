@@ -28,12 +28,14 @@ clicked.forEach((option) => {
 
 const typewriter = new Typewriter(introHeading, {
   autoStart: true,
+  delay: 50,
+  cursorClassName: "Typewriter__cursor"
 });
 
 function consoleTyping() {
   return new Promise((resolve, reject) => {
     typewriter
-      .typeString(' explorer "https://www.google.com"')
+      .typeString(' explorer "https://tyw-98.github.io/portfolio-website/"')
       .start()
       .callFunction(() => {
         resolve();

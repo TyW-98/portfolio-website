@@ -12,123 +12,7 @@ body {
     background-color: black;
 }
 
-/* Home page */
-#content,
-.landing-page {
-    opacity: 0;
-    transition: 1s ease-in-out;
-}
-
-.landing-page.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#intro-text {
-    color: white;
-    font-weight: 600;
-}
-
-.welcome-header {
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-}
-
-.welcome-message {
-    margin-left: calc((100% - 46rem)/2);
-}
-
-.navbar-column {
-    background-color: white;
-    color: black;
-    position: fixed;
-    width: 43.75rem;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-    justify-content: center;
-    align-items: center;
-    padding-top: 12.5rem;
-    opacity: 0;
-    transition: 1s ease-in-out;
-}
-
-#content.show, 
-.navbar-column.show,
-.landing-page.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.navbar-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.navbar-column ul li {
-    margin: 2rem 0;
-}
-
-.navbar-column ul li a {
-    color: black;
-    text-decoration: none;
-    font-size: 25pt;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.navbar-links ul li a:hover {
-    background-color: chocolate;
-    transition: all 0.5s ease-in-out;
-}
-
-.navbar-social-icons {
-    margin-top: 6.25rem;
-}
-
-.navbar-social-icons ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-social-icons {
-    margin: 0 1.875rem;
-}
-
-.home-social-icons i {
-    cursor: pointer;
-    font-size: 25pt;
-}
-
-.home-social-icons i:hover {
-    color: blue;
-    animation: bouncing 1s infinite;
-}
-
-@keyframes bouncing {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-0.625rem);
-    }
-}
-
-
-/* Home page console */
+/* Console Design */
 .console {
     background-color: rgb(78, 76, 76);
     width: 46.875rem;
@@ -194,12 +78,139 @@ body {
     visibility: hidden;
 }
 
-.testing {
-    height: 100vh;
-    background-color: red;
+/* Home section */
+#content,
+.landing-page {
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 
-.testing1 {
+.landing-page.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#intro-text {
+    color: white;
+    font-weight: 600;
+}
+
+.welcome-header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
     height: 100vh;
-    background-color: blue;
+}
+
+.welcome-message {
+    margin-left: calc((100% - 46rem)/2);
+}
+
+.navbar-column {
+    background-color: white;
+    color: black;
+    position: fixed;
+    width: 43.75rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7.8125rem;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+#content.show,
+.navbar-column.show,
+.landing-page.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-column ul li {
+    margin: 2rem 0;
+}
+
+.navbar-column ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 25pt;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar-links ul li a:hover {
+    background-color: chocolate;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-social-icons {
+    margin-top: 4.6875rem;
+}
+
+.navbar-social-icons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-social-icons {
+    margin: 0 1.875rem;
+}
+
+.home-social-icons i {
+    cursor: pointer;
+    font-size: 25pt;
+}
+
+.home-social-icons i:hover {
+    color: blue;
+    animation: bouncing 1s infinite;
+}
+
+@keyframes bouncing {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.625rem);
+    }
+}
+
+/* About Section */
+
+
+#about,
+#projects,
+#contact {
+    height: 100vh;
+    color: white;
+    font-size: 25pt
+}
+
+.about-content {
+
+}
+
+.testing {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-size: 25pt;
 }
