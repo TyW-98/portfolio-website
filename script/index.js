@@ -28,6 +28,8 @@ clicked.forEach((option) => {
 
 const typewriter = new Typewriter(introHeading, {
   autoStart: true,
+  delay: 50,
+  cursorClassName: "Typewriter__cursor"
 });
 
 function consoleTyping() {
