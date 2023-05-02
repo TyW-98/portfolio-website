@@ -218,10 +218,16 @@ body {
 
 
 /* Contact section */
-
-
 .contact-form {
     width: 50%;
     margin-left: 9.375rem;
     padding-top: 9.375rem;
+    font-size: 20pt;
+}
+
+.contact-form h2 {
+    text-align: center;
+    border-bottom: solid white 2px;
+    padding-bottom: 15px;
+    font-size: 24pt;
 }
