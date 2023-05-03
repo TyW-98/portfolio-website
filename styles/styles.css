@@ -219,14 +219,25 @@ body {
 
 
 /* Project Section */
-#projectCarousel {
+.project-content {
     width: 50%;
     margin-left: 7.8125rem;
 }
 
+.project-title {
+    margin-bottom: 50px;
+    text-align: center;
+    border-bottom: solid white;
+    padding-bottom: 10px;
+    font-size: 25pt;
+}
+
+#projectCarousel {
+}
+
 .carousel-indicators {
     position: relative;
-    top: 20.625rem;
+    top: 400px;
 }
 
 .carousel-control-prev,
