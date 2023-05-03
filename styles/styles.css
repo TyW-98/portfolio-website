@@ -232,6 +232,10 @@ body {
     font-size: 25pt;
 }
 
+.project-title:last-of-type {
+    margin-top: 50px;
+}
+
 .carousel-indicators {
     position: relative;
     top: 400px;
