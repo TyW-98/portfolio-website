@@ -90,11 +90,6 @@ body {
     transform: translateY(0);
 }
 
-#intro-text {
-    color: white;
-    font-weight: 600;
-}
-
 .welcome-header {
     background-color: black;
     color: white;
@@ -104,7 +99,9 @@ body {
 }
 
 .welcome-message {
-    margin-left: calc((100% - 46rem)/2);
+    margin-left: 7.8125rem;
+    text-align: center;
+    width: 50%;
 }
 
 .navbar-column {
@@ -206,7 +203,8 @@ body {
 .about-content {
     width: 50%;
     color: white;
-
+    margin-left: 7.8125rem;
+    text-align: center;
 
 }
 
