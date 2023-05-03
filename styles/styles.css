@@ -99,9 +99,8 @@ body {
 }
 
 .welcome-message {
-    margin-left: 7.8125rem;
-    text-align: center;
-    width: 50%;
+    margin: 0 auto;
+    width: calc(100% - 43.75rem)
 }
 
 .navbar-column {
@@ -203,18 +202,15 @@ body {
 .about-content {
     width: 50%;
     color: white;
+    margin: auto 0;
     margin-left: 7.8125rem;
     text-align: center;
-
 }
 
-.testing {
-    height: 100vh;
-    background-color: black;
-    color: white;
-    font-size: 25pt;
+.about-content h2 {
+    border-bottom: solid white;
+    padding-bottom: 10px;
 }
-
 
 /* Project Section */
 .project-content {
