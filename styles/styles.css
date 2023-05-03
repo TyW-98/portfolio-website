@@ -232,9 +232,6 @@ body {
     font-size: 25pt;
 }
 
-#projectCarousel {
-}
-
 .carousel-indicators {
     position: relative;
     top: 400px;
@@ -258,6 +255,11 @@ body {
     height: 300px;
     overflow: hidden;
     width: 300px
+}
+
+.project-image {
+    width: 100%;
+    height: 35%;
 }
 
 .card-text {
