@@ -194,8 +194,6 @@ body {
 }
 
 /* About Section */
-
-
 #about,
 #projects,
 #contact {
@@ -206,6 +204,9 @@ body {
 }
 
 .about-content {
+    width: 50%;
+    color: white;
+
 
 }
 
@@ -214,6 +215,42 @@ body {
     background-color: black;
     color: white;
     font-size: 25pt;
+}
+
+
+/* Project Section */
+#projectCarousel {
+    width: 50%;
+    margin-left: 7.8125rem;
+}
+
+.carousel-indicators {
+    position: relative;
+    top: 20.625rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: -7.8125rem;
+}
+
+.carousel-control-next {
+    right: -7.8125rem;
+}
+
+.project-card {
+    height: 300px;
+    overflow: hidden;
+    width: 300px
+}
+
+.card-text {
+    font-size: 16pt;
 }
 
 
