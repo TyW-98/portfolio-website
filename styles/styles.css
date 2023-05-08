@@ -1,7 +1,7 @@
 :root {
-    --primary-background-color:#000000;
+    --primary-background-color:#101820FF;
     --primary-font-color: rgb(255, 255, 255);
-    --nav-column-background-color:  #E0A96D;
+    --nav-column-background-color:  #F2AA4CFF;
     --nav-column-hover-color: 
 }
 
@@ -90,9 +90,10 @@ body {
 
 /* NAV COLUMN */
 .navbar-column {
-    background-image: url("../images/navbar-background-2.png");
+    /* background-image: url("../images/navbar-background-2.png");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background-color: var(--nav-column-background-color);
     color: black;
     position: fixed;
     width: 43.75rem;
@@ -332,4 +333,8 @@ body {
     border-bottom: solid white 2px;
     padding-bottom: 15px;
     font-size: 24pt;
+}
+
+.send-btn {
+    background-color: var(--nav-column-background-color);
 }
