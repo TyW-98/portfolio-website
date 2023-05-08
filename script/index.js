@@ -1,8 +1,8 @@
 const Typewriter = window.Typewriter;
 
-const console = document.getElementsByClassName("console")[0];
-const introHeading = document.getElementsByClassName("console-text")[0];
-const newConsoleRow = document.getElementsByClassName("new-console-row")[0];
+// const console = document.getElementsByClassName("console")[0];
+// const introHeading = document.getElementsByClassName("console-text")[0];
+// const newConsoleRow = document.getElementsByClassName("new-console-row")[0];
 const landingPage = document.getElementsByClassName("landing-page")[0];
 const navbar = document.getElementsByClassName("navbar-column")[0];
 const mainContent = document.getElementById("content");
@@ -26,32 +26,36 @@ clicked.forEach((option) => {
   });
 });
 
-const typewriter = new Typewriter(introHeading, {
-  autoStart: true,
-  delay: 50,
-  cursorClassName: "Typewriter__cursor"
-});
+landingPage.classList.add("show");
+navbar.classList.add("show");
+content.classList.add("show");
 
-function consoleTyping() {
-  return new Promise((resolve, reject) => {
-    typewriter
-      .typeString(' explorer "https://tyw-98.github.io/portfolio-website/"')
-      .start()
-      .callFunction(() => {
-        resolve();
-      });
-  });
-}
+// const typewriter = new Typewriter(introHeading, {
+//   autoStart: true,
+//   delay: 50,
+//   cursorClassName: "Typewriter__cursor"
+// });
 
-consoleTyping().then(() => {
-  const cursor = document.getElementsByClassName("Typewriter__cursor")[0];
-  cursor.innerHTML = "";
-  newConsoleRow.style.visibility = "visible";
-  setTimeout(() => {
-    console.classList.add("hide");
-    newConsoleRow.innerHTML = "";
-    landingPage.classList.add("show");
-    navbar.classList.add("show");
-    content.classList.add("show");
-  }, 1500);
-});
+// function consoleTyping() {
+//   return new Promise((resolve, reject) => {
+//     typewriter
+//       .typeString(' explorer "https://tyw-98.github.io/portfolio-website/"')
+//       .start()
+//       .callFunction(() => {
+//         resolve();
+//       });
+//   });
+// }
+
+// consoleTyping().then(() => {
+//   const cursor = document.getElementsByClassName("Typewriter__cursor")[0];
+//   cursor.innerHTML = "";
+//   newConsoleRow.style.visibility = "visible";
+//   setTimeout(() => {
+//     console.classList.add("hide");
+//     newConsoleRow.innerHTML = "";
+//     landingPage.classList.add("show");
+//     navbar.classList.add("show");
+//     content.classList.add("show");
+//   }, 1500);
+// });
