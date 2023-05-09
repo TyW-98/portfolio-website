@@ -1,3 +1,10 @@
+:root {
+    --primary-background-color:#101820FF;
+    --primary-font-color: rgb(255, 255, 255);
+    --nav-column-background-color:  #F2AA4CFF;
+    --nav-column-hover-color: 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,25 +16,28 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: var(--primary-background-color);
+    color: var(--primary-font-color);
+    font-family: 'Ysabeau', sans-serif;
 }
 
 /* Console Design */
 .console {
-    background-color: rgb(78, 76, 76);
+    background-color: black;
     width: 46.875rem;
     height: 34.375rem;
     margin: 0 auto;
     position: absolute;
     top: 9.375rem;
     left: 32.5%;
-    border: solid .1875rem white;
+    border: solid .1875rem rgb(136, 134, 134);
     border-radius: .625rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    z-index: 0;
     transition: all 0.5s ease-in-out;
+    color: black;
 }
 
 .console.hide {
@@ -39,7 +49,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgb(136, 134, 134);
     padding: .3125rem .625rem;
     cursor: pointer;
 }
@@ -78,37 +88,12 @@ body {
     visibility: hidden;
 }
 
-/* Home section */
-#content,
-.landing-page {
-    opacity: 0;
-    transition: 1s ease-in-out;
-}
-
-.landing-page.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#intro-text {
-    color: white;
-    font-weight: 600;
-}
-
-.welcome-header {
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-}
-
-.welcome-message {
-    margin-left: calc((100% - 46rem)/2);
-}
-
+/* NAV COLUMN */
 .navbar-column {
-    background-color: white;
+    /* background-image: url("../images/navbar-background-2.png");
+    background-size: cover;
+    background-position: center; */
+    background-color: var(--nav-column-background-color);
     color: black;
     position: fixed;
     width: 43.75rem;
@@ -128,6 +113,10 @@ body {
 .landing-page.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+#content {
+    z-index: 5;
 }
 
 .navbar-column ul {
@@ -152,8 +141,9 @@ body {
 }
 
 .navbar-links ul li a:hover {
-    background-color: chocolate;
-    transition: all 0.5s ease-in-out;
+    background-color: rgb(22, 54, 124);
+    color: skyblue;
+    transition: all 0.125s ease-in-out;
 }
 
 .navbar-social-icons {
@@ -177,7 +167,7 @@ body {
 }
 
 .home-social-icons i:hover {
-    color: blue;
+    color: rgb(28, 135, 177);
     animation: bouncing 1s infinite;
 }
 
@@ -193,30 +183,57 @@ body {
     }
 }
 
+.nav-col-text {
+    text-align: center;
+}
+
+/* Home section */
+#content,
+.landing-page {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.landing-page.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome-message {
+    margin: 0 auto;
+    width: calc(100% - 43.75rem);
+    font-size: 36pt;
+}
+
+.welcome-text {
+    font-size: 24pt;
+}
+
 /* About Section */
 #about,
 #projects,
 #contact {
     height: 100vh;
-    color: white;
     font-size: 25pt;
-    background-color: black;
 }
 
 .about-content {
     width: 50%;
-    color: white;
-
-
+    margin: auto 0;
+    margin-left: 7.8125rem;
+    text-align: center;
 }
 
-.testing {
-    height: 100vh;
-    background-color: black;
-    color: white;
-    font-size: 25pt;
+.about-content h2 {
+    border-bottom: solid white;
+    padding-bottom: 10px;
 }
-
 
 /* Project Section */
 .project-content {
@@ -255,23 +272,55 @@ body {
     right: -7.8125rem;
 }
 
+.carousel-control-prev span,
+.carousel-control-next span {
+    background-color: black;
+}
+
+.project-card-link {
+    text-decoration: none;
+}
+
 .project-card {
-    height: 300px;
+    height: 400px;
     overflow: hidden;
-    width: 300px
+    width: 300px;
 }
 
 .project-image {
-    width: 100%;
     height: 35%;
 }
 
-.card-text {
-    font-size: 16pt;
+.card-body {
+    background-color: coral;
+    padding: 0 5px;
+    margin: 0;
 }
 
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 12pt;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.card-footer {
+    background-color: coral;
+    border: none;
+}
+
+.card-footer a {
+    position: relative;
+}
 
 /* Contact section */
+#contact {
+    margin-top: 4.6875rem;
+}
+
 .contact-form {
     width: 50%;
     margin-left: 9.375rem;
@@ -284,4 +333,8 @@ body {
     border-bottom: solid white 2px;
     padding-bottom: 15px;
     font-size: 24pt;
+}
+
+.send-btn {
+    background-color: var(--nav-column-background-color);
 }

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TyW</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -26,7 +33,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <div class="console">
+    <!-- <div class="console">
       <div class="console-header">
         <span class="console-title">Command Prompt</span>
         <div class="console-buttons">
@@ -40,8 +47,8 @@
         <p>C:\> <span class="console-text"></span></p>
         <p class="new-console-row">C:\></p>
       </div>
-    </div>
-    <div>
+    </div> -->
+    <div class="container-fluid">
       <nav class="navbar-column">
         <div class="navbar-links">
           <ul>
@@ -83,15 +90,20 @@
             </li> -->
           </ul>
         </div>
+        <div class="nav-col-text">
+          <p>TyW-98</p>
+        </div>
       </nav>
     </div>
     <div id="content" class="container-fluid" data-scroll-container>
       <section id="home" data-scroll-section data-scroll>
-        <div class="landing-page" data-scroll-section>
+        <div class="landing-page" data-scroll-section data-scroll>
           <div class="welcome-header">
-            <div class="welcome-message" data-scroll>
-              <h1 data-scroll>Welcome to My Portfolio</h1>
-              <p data-scroll>Passionate about creating elegant web solutions</p>
+            <div class="welcome-message">
+              <h1>Welcome to My Portfolio</h1>
+              <div class="welcome-text">
+                <p>Passionate about creating elegant web solutions</p>
+              </div>
             </div>
           </div>
         </div>
@@ -109,7 +121,11 @@
       <section id="projects" class="testing" data-scroll-section data-scroll>
         <div class="project-content">
           <h2 class="project-title">Web Development</h2>
-          <div id="projectCarousel" class="carousel slide" data-interval="false">
+          <div
+            id="projectCarousel"
+            class="carousel slide"
+            data-interval="false"
+          >
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="container">
@@ -228,21 +244,61 @@
             </a>
           </div>
           <h2 class="project-title">Engineering & Python</h2>
-          <div id="projectCarousel2" class="carousel slide" data-interval="false">
+          <div
+            id="projectCarousel2"
+            class="carousel slide"
+            data-interval="false"
+          >
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="container">
                   <div class="row">
                     <div class="col-md-4">
+                      <a
+                        href="pdf/Final Thesis.pdf"
+                        target="_blank"
+                        class="project-card-link"
+                      >
+                        <div class="card project-card">
+                          <img
+                            class="project-image"
+                            src="images/turbofan-2.jpeg"
+                            alt="project-image"
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              Gas Turbine Gas Path Diagnostics Using Artificial
+                              Neural Network
+                            </h5>
+                            <p class="card-text">
+                              Designed and developed a diagnostics system
+                              capable of detecting, isolating and quantifying
+                              degradation along the gas path of a gas turbine.
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-4">
                       <div class="card project-card">
                         <img
                           class="project-image"
-                          src="..."
+                          src="images/UAV-3.png"
                           alt="project-image"
                         />
                         <div class="card-body">
-                          <h5 class="card-title">Card-title</h5>
-                          <p class="card-text">card text</p>
+                          <h5 class="card-title">
+                            Unmanned Aerial Vehicle Design
+                          </h5>
+                          <p class="card-text">
+                            Design and manufacture a fully functional unmanned
+                            aerial vehicle (UAV) that meets the requirements set
+                            by BMFA within specified constraints. Conducted
+                            thorough performance analysis and calculations to
+                            determine the optimal design, while utilizing CATIA
+                            for designing structural components suitable for 3D
+                            printing or laser cutting.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -250,25 +306,21 @@
                       <div class="card project-card">
                         <img
                           class="project-image"
-                          src="..."
+                          src="images/solar-panel.png"
                           alt="project-image"
                         />
                         <div class="card-body">
-                          <h5 class="card-title">Card-title</h5>
-                          <p class="card-text">card text</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card project-card">
-                        <img
-                          class="project-image"
-                          src="..."
-                          alt="project-image"
-                        />
-                        <div class="card-body">
-                          <h5 class="card-title">Card-title</h5>
-                          <p class="card-text">card text</p>
+                          <h5 class="card-title">
+                            Light Tracking Solar Panel Model
+                          </h5>
+                          <p class="card-text">
+                            Design, develop, and manufacture a functional
+                            light-tracking solar panel model using Arduino
+                            MEGA2560 microcontroller. CATIA is utilized for
+                            designing and iterating the model, while a real-time
+                            control system developed with Simulink and Arduino
+                            ensures accurate sunlight tracking.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -279,43 +331,85 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-md-4">
-                      <div class="card project-card">
-                        <img
-                          class="project-image"
-                          src="..."
-                          alt="project-image"
-                        />
-                        <div class="card-body">
-                          <h5 class="card-title">Card-title</h5>
-                          <p class="card-text">card text</p>
+                      <a
+                        href="https://github.com/TyW-98/modelling-airbnbs-property-listing-dataset-"
+                        target="_blank"
+                        class="project-card-link"
+                      >
+                        <div class="card project-card">
+                          <img
+                            class="project-image"
+                            src="images/Airbnb-1.png"
+                            alt="project-image"
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              Modelling AirBnb Property Listing
+                            </h5>
+                            <p class="card-text">
+                              Develop a framework to train, test and evaluate
+                              various machine learning models to predict the
+                              price per night of Airbnb property listings using
+                              property-related features.
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
                     <div class="col-md-4">
-                      <div class="card project-card">
-                        <img
-                          class="project-image"
-                          src="..."
-                          alt="project-image"
-                        />
-                        <div class="card-body">
-                          <h5 class="card-title">Card-title</h5>
-                          <p class="card-text">card text</p>
+                      <a
+                        href="https://github.com/TyW-98/data-collection-pipeline"
+                        class="project-card-link"
+                        target="_blank"
+                      >
+                        <div class="card project-card">
+                          <img
+                            class="project-image"
+                            src="images/dc-2.png"
+                            alt="project-image"
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">Data Collection Pipeline</h5>
+                            <p class="card-text">
+                              This project focuses on developing a web scraper
+                              that extracts data from Agoda's website, an online
+                              travel agency. By leveraging the selenium package,
+                              the scraper will perform targeted searches for
+                              hotels and resorts at the user's specified
+                              destination within Agoda's listings. The collected
+                              data can be utilised for analysis and comparison
+                              purposes.
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
                     <div class="col-md-4">
-                      <div class="card project-card">
-                        <img
-                          class="project-image"
-                          src="..."
-                          alt="project-image"
-                        />
-                        <div class="card-body">
-                          <h5 class="card-title">Card-title11</h5>
-                          <p class="card-text">card text</p>
+                      <a
+                        href="https://github.com/TyW-98/computer-vision-rock-paper-scissors"
+                        target="_blank"
+                        class="project-card-link"
+                      >
+                        <div class="card project-card">
+                          <img
+                            class="project-image"
+                            src="images/rps.png"
+                            alt="project-image"
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              Computer Vision Rock Paper Scissors Game
+                            </h5>
+                            <p class="card-text">
+                              Experience the classic game of Rock Paper Scissors
+                              with a modern twist! This Python program uses
+                              pre-trained image classification models and
+                              computer vision to play against a computer using a
+                              webcam.
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -406,7 +500,7 @@
                 ></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-large btn-info">SEND</button>
+            <button type="submit" class="btn btn-large send-btn">SEND</button>
           </form>
         </div>
       </section>
