@@ -282,12 +282,20 @@ body {
 }
 
 .project-card {
-    height: 400px;
-    overflow: hidden;
-    width: 300px;
+    height: 25rem;
 }
 
 .project-image {
+    height: 80%;
+}
+
+.project-card-2 {
+    height: 25rem;
+    overflow: hidden;
+    width: 18.75rem;
+}
+
+.project-image-2 {
     height: 35%;
 }
 
@@ -324,7 +332,7 @@ body {
 .contact-form {
     width: 50%;
     margin-left: 9.375rem;
-    padding-top: 9.375rem;
+    padding-top: 12.5rem;
     font-size: 20pt;
 }
 
