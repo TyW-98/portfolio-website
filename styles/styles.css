@@ -14,7 +14,7 @@
 
 body,
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -232,17 +232,22 @@ body {
 #about,
 #projects,
 #contact {
-    height: 100vh;
     font-size: 25pt;
 }
 
-.about-content {
-    margin: auto;
+#about {
+    height: 60vh;
+}
+
+.about-content,
+.tech-stack {
+    margin: auto 0 0;
     text-align: center;
     padding: 0 10px;
 }
 
-.about-content h2 {
+.about-content h2,
+.tech-stack h2 {
     border-bottom: solid white;
     padding-bottom: 10px;
 }
@@ -252,7 +257,42 @@ body {
     font-size: 16pt;
 }
 
+.tech-stack {
+    margin-top: 3.125rem;
+}
+
+.tech-stack ul {
+    list-style: none;
+    text-align: left;
+    margin-top: .9375rem;
+}
+
+.tech-stack ul li {
+    margin-bottom: 1%;
+}
+
+.tech-stack ul li h5 {
+    display: inline-block;
+    font-size: 24pt;
+}
+
+.tech-icon {
+    display: flex;
+    align-items: center;
+
+}
+
+.tech-icon img {
+    width: 5%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
 /* Project Section */
+.project-content {
+    margin-top: 2.1875rem;
+}
+
 .project-title {
     margin-bottom: 3.125rem;
     text-align: center;
@@ -262,7 +302,7 @@ body {
 }
 
 .project-title:last-of-type {
-    margin-top: 3.125rem;
+    margin-top: 1%;
 }
 
 .carousel-indicators {
@@ -343,11 +383,12 @@ body {
 
 /* Contact section */
 #contact {
-    margin-top: 4.6875rem;
+    margin-top: 0.1%;
+    margin-bottom: 0.2%;
+    height: 70vh;
 }
 
 .contact-form {
-    padding-top: 12.5rem;
     font-size: 20pt;
 }
 
