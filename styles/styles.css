@@ -282,12 +282,22 @@ body {
 }
 
 .project-card {
-    height: 400px;
+    height: 25rem;
     overflow: hidden;
-    width: 300px;
+    display: flex;
 }
 
 .project-image {
+    height: 65%;
+}
+
+.project-card-2 {
+    height: 25rem;
+    overflow: hidden;
+    width: 18.75rem;
+}
+
+.project-image-2 {
     height: 35%;
 }
 
@@ -310,6 +320,8 @@ body {
 .card-footer {
     background-color: coral;
     border: none;
+    max-height: 6rem;
+    overflow-y: visible;
 }
 
 .card-footer a {
@@ -324,7 +336,7 @@ body {
 .contact-form {
     width: 50%;
     margin-left: 9.375rem;
-    padding-top: 9.375rem;
+    padding-top: 12.5rem;
     font-size: 20pt;
 }
 
