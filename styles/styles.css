@@ -285,10 +285,13 @@ body {
 .tech-icon img {
     width: 5%;
     display: inline-block;
+    margin-right: 10px;
 }
 
-
 /* Project Section */
+.project-content {
+    margin-top: 2.1875rem;
+}
 
 .project-title {
     margin-bottom: 3.125rem;
