@@ -206,13 +206,16 @@ body {
 }
 
 .welcome-message {
-    margin: 0 auto;
-    width: calc(100% - 43.75rem);
-    font-size: 36pt;
+    margin-left: 200px;
+    width: 50%;
 }
 
-.welcome-text {
-    font-size: 24pt;
+.welcome-message h1:first-of-type {
+    font-size: 40pt;
+}
+
+.welcome-message h1:last-of-type {
+    font-size: 30pt;
 }
 
 /* About Section */
@@ -233,6 +236,11 @@ body {
 .about-content h2 {
     border-bottom: solid white;
     padding-bottom: 10px;
+}
+
+.about-content p {
+    text-align: justify;
+    font-size: 16pt;
 }
 
 /* Project Section */
