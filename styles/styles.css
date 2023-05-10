@@ -283,10 +283,12 @@ body {
 
 .project-card {
     height: 25rem;
+    overflow: hidden;
+    display: flex;
 }
 
 .project-image {
-    height: 80%;
+    height: 65%;
 }
 
 .project-card-2 {
@@ -318,6 +320,8 @@ body {
 .card-footer {
     background-color: coral;
     border: none;
+    max-height: 6rem;
+    overflow-y: visible;
 }
 
 .card-footer a {
