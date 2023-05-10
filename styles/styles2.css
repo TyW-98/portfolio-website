@@ -1,9 +1,8 @@
 :root {
-    --primary-background-color:#101820FF;
+    --primary-background-color: #101820FF;
     --primary-font-color: rgb(255, 255, 255);
-    --nav-column-background-color:  #F2AA4CFF;
-    --nav-column-hover-color: skyblue;
-    --nav-column-width: 28%;
+    --nav-column-background-color: #F2AA4CFF;
+    --nav-column-hover-color: ;
 }
 
 * {
@@ -14,7 +13,7 @@
 
 body,
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -24,16 +23,18 @@ body {
 }
 
 /* Console Design */
-/* .console {
+.console {
     background-color: black;
-    width: 46.875rem;
-    height: 34.375rem;
+    width: 90%;
+    max-width: 46.875rem;
+    height: 60vh;
     margin: 0 auto;
     position: absolute;
-    top: 9.375rem;
-    left: 32.5%;
-    border: solid .1875rem rgb(136, 134, 134);
-    border-radius: .625rem;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid 0.1875rem rgb(136, 134, 134);
+    border-radius: 0.625rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -52,7 +53,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(136, 134, 134);
-    padding: .3125rem .625rem;
+    padding: 0.3125rem 0.625rem;
     cursor: pointer;
 }
 
@@ -62,7 +63,7 @@ body {
 
 .console-buttons {
     display: flex;
-    margin-right: .3125rem;
+    margin-right: 0.3125rem;
 }
 
 .console-button {
@@ -71,11 +72,11 @@ body {
 }
 
 .console-body {
-    padding: .625rem;
-    height: 100%;
+    padding: 0.625rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    color: rgb(48, 182, 15)
+    color: rgb(48, 182, 15);
 }
 
 .console-body p:last-of-type {
@@ -88,17 +89,14 @@ body {
 
 .new-console-row {
     visibility: hidden;
-} */
+}
 
 /* NAV COLUMN */
 .navbar-column {
-    /* background-image: url("../images/navbar-background-2.png");
-    background-size: cover;
-    background-position: center; */
     background-color: var(--nav-column-background-color);
     color: black;
     position: fixed;
-    width: var(--nav-column-width);
+    width: 28%;
     max-width: 28rem;
     top: 0;
     bottom: 0;
@@ -106,7 +104,7 @@ body {
     z-index: 5;
     justify-content: center;
     align-items: center;
-    padding-top: 5.5%;
+    padding-top: 7.8125rem;
     opacity: 0;
     transition: 1s ease-in-out;
 }
@@ -116,6 +114,10 @@ body {
 .landing-page.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+#content {
+    z-index: 5;
 }
 
 .navbar-column ul {
@@ -128,15 +130,15 @@ body {
 }
 
 .navbar-column ul li {
-    margin: 7.5% 0;
+    margin: 2rem 0;
 }
 
 .navbar-column ul li a {
     color: black;
     text-decoration: none;
-    font-size: 25pt;
+    font-size: 3rem;
     font-weight: bold;
-    padding: .625rem;
+    padding: 10px;
 }
 
 .navbar-links ul li a:hover {
@@ -146,7 +148,7 @@ body {
 }
 
 .navbar-social-icons {
-    margin-top: 10%;
+    margin-top: 4.6875rem;
 }
 
 .navbar-social-icons ul {
@@ -162,7 +164,7 @@ body {
 
 .home-social-icons i {
     cursor: pointer;
-    font-size: 25pt;
+    font-size: 3rem;
 }
 
 .home-social-icons i:hover {
@@ -187,20 +189,6 @@ body {
 }
 
 /* Home section */
-#content {
-    z-index: 0;
-    margin: 0 auto;
-    position: relative;
-    right: 225px;
-    width: calc(100% - var(--nav-column-width));
-}
-
-/* #home {
-    background-image: url("../images/navbar-background-2.png");
-    background-size: cover;
-    background-position: center;
-} */
-
 #content,
 .landing-page {
     opacity: 0;
@@ -216,58 +204,67 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
-    position: relative;
-    left: 40%;
+}
+
+.welcome-message {
+    margin-left: 5%;
+    width: 50%;
 }
 
 .welcome-message h1:first-of-type {
-    font-size: 40pt;
+    font-size: 4rem;
 }
 
 .welcome-message h1:last-of-type {
-    font-size: 30pt;
+    font-size: 3rem;
 }
 
 /* About Section */
 #about,
 #projects,
 #contact {
-    height: 100vh;
-    font-size: 25pt;
+    min-height: 100vh;
+    font-size: 3rem;
+    padding: 3rem;
 }
 
 .about-content {
-    margin: auto;
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
-    padding: 0 10px;
 }
 
 .about-content h2 {
     border-bottom: solid white;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
 }
 
 .about-content p {
     text-align: justify;
-    font-size: 16pt;
+    font-size: 1.6rem;
 }
 
 /* Project Section */
+.project-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .project-title {
-    margin-bottom: 3.125rem;
+    margin-bottom: 3rem;
     text-align: center;
     border-bottom: solid white;
-    padding-bottom: .625rem;
-    font-size: 25pt;
+    padding-bottom: 1rem;
+    font-size: 3rem;
 }
 
 .project-title:last-of-type {
-    margin-top: 3.125rem;
+    margin-top: 3rem;
 }
 
 .carousel-indicators {
     position: relative;
-    top: 400px;
+    top: 10rem;
 }
 
 .carousel-control-prev,
@@ -277,11 +274,11 @@ body {
 }
 
 .carousel-control-prev {
-    left: -8%
+    left: -3rem;
 }
 
 .carousel-control-next {
-    right: -8%;
+    right: -3rem;
 }
 
 .carousel-control-prev span,
@@ -294,7 +291,7 @@ body {
 }
 
 .project-card {
-    height: 90%;
+    height: 25rem;
     overflow: hidden;
     display: flex;
 }
@@ -304,14 +301,13 @@ body {
 }
 
 .project-card-2 {
-    height: 90%;
+    height: 25rem;
     overflow: hidden;
-    width: 90%;
+    width: 18.75rem;
 }
 
 .project-image-2 {
     height: 35%;
-    overflow-y: auto;
 }
 
 .card-body {
@@ -325,7 +321,7 @@ body {
 }
 
 .card-text {
-    font-size: 12pt;
+    font-size: 1.2rem;
     text-align: justify;
     font-weight: 400;
 }
@@ -347,17 +343,21 @@ body {
 }
 
 .contact-form {
+    width: 80%;
+    margin: 0 auto;
     padding-top: 12.5rem;
-    font-size: 20pt;
+    font-size: 2rem;
 }
 
 .contact-form h2 {
     text-align: center;
     border-bottom: solid white 2px;
-    padding-bottom: 15px;
-    font-size: 24pt;
+    padding-bottom: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .send-btn {
     background-color: var(--nav-column-background-color);
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
 }
