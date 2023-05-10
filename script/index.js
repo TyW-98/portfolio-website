@@ -6,6 +6,8 @@ const Typewriter = window.Typewriter;
 const landingPage = document.getElementsByClassName("landing-page")[0];
 const navbar = document.getElementsByClassName("navbar-column")[0];
 const mainContent = document.getElementById("content");
+const nameSpan = document.getElementsByClassName("name")[0];
+const passionSpan = document.getElementsByClassName("passion-span")[0];
 
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
@@ -30,10 +32,10 @@ landingPage.classList.add("show");
 navbar.classList.add("show");
 content.classList.add("show");
 
-// const typewriter = new Typewriter(introHeading, {
+// const typewriter = new Typewriter(nameSpan, {
 //   autoStart: true,
 //   delay: 50,
-//   cursorClassName: "Typewriter__cursor"
+//   cursorClassName: "Typewriter__cursor",
 // });
 
 // function consoleTyping() {
